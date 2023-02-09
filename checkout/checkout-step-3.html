@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Newitts</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-3.6.0.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous" defer></script>
+    <script src="js/jquery.main.js" defer></script>
+  </head>
+  <body><svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs>
+<symbol id="icon-creditcard" viewBox="0 0 32 32">
+<path d="M7.412 24.324h17.166c2.18 0 3.305-1.135 3.305-3.285v-10.848c0-2.15-1.125-3.275-3.305-3.275h-17.166c-2.17 0-3.305 1.125-3.305 3.275v10.848c0 2.16 1.135 3.285 3.305 3.285zM6.106 10.372c0-0.964 0.512-1.446 1.436-1.446h16.905c0.924 0 1.436 0.482 1.436 1.446v0.723h-19.778v-0.723zM7.542 22.315c-0.924 0-1.436-0.482-1.436-1.446v-7.413h19.778v7.413c0 0.964-0.512 1.446-1.436 1.446h-16.905zM8.908 20.497h2.461c0.593 0 0.994-0.392 0.994-0.954v-1.868c0-0.562-0.402-0.954-0.994-0.954h-2.461c-0.583 0-0.984 0.392-0.984 0.954v1.868c0 0.563 0.402 0.954 0.984 0.954z"></path>
+</symbol>
+<symbol id="icon-reload" viewBox="0 0 32 32">
+<path d="M16.023 31.179c-2.597 0-5.175-0.686-7.429-2.002-2.885-1.682-5.129-4.329-6.322-7.445l2.562-0.983c0.969 2.537 2.798 4.688 5.143 6.055 2.347 1.371 5.127 1.902 7.803 1.499 2.686-0.402 5.179-1.723 7.017-3.719 1.845-2 2.96-4.592 3.143-7.298 0.183-2.711-0.571-5.429-2.126-7.657-1.552-2.224-3.842-3.87-6.45-4.635-2.603-0.761-5.424-0.61-7.934 0.43-2.167 0.898-4.027 2.423-5.335 4.354h5.243v2.743h-9.371v-9.371h2.743v3.913c1.518-1.817 3.465-3.262 5.671-4.174 3.083-1.275 6.549-1.465 9.753-0.526 3.207 0.939 6.025 2.962 7.931 5.701 1.911 2.738 2.837 6.080 2.613 9.413-0.226 3.328-1.598 6.514-3.861 8.969s-5.333 4.078-8.633 4.574c-0.715 0.107-1.44 0.16-2.162 0.16z"></path>
+</symbol>
+<symbol id="icon-delivery" viewBox="0 0 48 32">
+<path d="M33.803 22l1.6-18.6c0-0.6-0.4-1.2-1-1.2h-27c-0.265 0-0.52-0.105-0.707-0.293s-0.293-0.442-0.293-0.707c0-0.6 0.6-1.2 1.2-1.2h27c1.8 0 3.2 1.6 3 3.4l-0.4 3.4h5.6c1.6 0 3 0.6 4 1.6 0.8 1 1.4 2.4 1.2 4l-1 11c0 2-1.8 3.4-3.6 3.4h-3.6c-0.6 2-2.4 3.4-4.6 3.4-0.965 0.011-1.901-0.327-2.636-0.952s-1.22-1.494-1.364-2.448h-18.2c-0.6 2-2.6 3.4-4.6 3.4-0.965 0.011-1.901-0.327-2.636-0.952s-1.22-1.494-1.364-2.448h-1.4c-1.8 0-3.2-1.4-3-3.4l0.2-2c0-0.8 0.6-1.2 1.2-1.2s1.2 0.4 1 1v2.2c-0.2 0.8 0.2 1.2 0.8 1.2h1.4c0.6-2 2.4-3.4 4.6-3.4 2 0 3.6 1.4 4 3.4h18c0.6-1.2 1.4-2 2.6-2.8v0.2zM9.003 23.4c1.2 0 2 1 2 2.4 0 1.2-1.2 2-2.4 2-0.53 0-1.039-0.211-1.414-0.586s-0.586-0.884-0.586-1.414c0-1.4 1.2-2.4 2.4-2.4zM35.803 23.4c1.2 0 2 1 2 2.4 0 1.2-1.2 2-2.4 2-0.53 0-1.039-0.211-1.414-0.586s-0.586-0.884-0.586-1.414c0-1.4 1.2-2.4 2.4-2.4zM36.003 21.4c2 0 3.8 1.2 4 3.2h3.6c0.6 0 1.2-0.4 1.2-1.2l0.2-3.2h-1c-0.15 0.003-0.299-0.028-0.435-0.090s-0.257-0.154-0.353-0.27-0.165-0.251-0.202-0.396c-0.037-0.145-0.040-0.297-0.010-0.444 0-0.6 0.6-1.2 1.2-1.2h1l0.2-2h-3.4c-0.15 0.003-0.299-0.028-0.435-0.090s-0.257-0.154-0.353-0.27-0.165-0.251-0.202-0.396c-0.037-0.145-0.040-0.297-0.010-0.444 0-0.6 0.6-1.2 1.2-1.2h3.4v-1c0.2-1 0-2-0.6-2.4-0.6-0.6-1.4-1-2.4-1h-5.6l-1 12.2v0.2zM20.003 13.4h-18c-0.6 0-1.2 0.6-1.2 1.2s0.4 1 1 1h18c0.6 0 1-0.4 1.2-1 0-0.6-0.4-1.2-1-1.2zM4.603 9h15.8c0.6 0 1-0.6 1.2-1.2 0-0.6-0.4-1-1-1h-15.8c-0.6 0-1.2 0.4-1.2 1s0.4 1.2 1 1.2z"></path>
+</symbol>
+<symbol id="icon-close" viewBox="0 0 32 32">
+<path d="M17.355 16.243l7.565-7.563c0.374-0.374 0.374-0.982 0-1.358s-0.981-0.374-1.357 0l-7.565 7.563-7.563-7.563c-0.374-0.374-0.982-0.374-1.358 0s-0.374 0.982 0 1.358l7.565 7.563-7.565 7.563c-0.374 0.373-0.374 0.981 0 1.357 0.187 0.187 0.434 0.282 0.678 0.282s0.491-0.094 0.678-0.282l7.565-7.563 7.565 7.565c0.187 0.187 0.434 0.282 0.678 0.282s0.491-0.094 0.678-0.282c0.374-0.373 0.374-0.982 0-1.357l-7.565-7.565z"></path>
+</symbol>
+<symbol id="icon-minus" viewBox="0 0 32 32">
+<path d="M26.896 17.856h-21.914c-1.062 0-1.92-0.858-1.92-1.92s0.861-1.92 1.92-1.92h21.917c1.059 0 1.92 0.861 1.92 1.92s-0.864 1.92-1.923 1.92z"></path>
+</symbol>
+<symbol id="icon-plus" viewBox="0 0 32 32">
+<path d="M25.905 14.196h-8.218v-8.215c0-0.966-0.78-1.745-1.745-1.745s-1.745 0.783-1.745 1.745v8.215h-8.212c-0.966 0-1.745 0.783-1.745 1.745s0.783 1.745 1.745 1.745h8.212v8.215c0 0.963 0.783 1.745 1.745 1.745s1.745-0.783 1.745-1.745v-8.215h8.218c0.963 0 1.745-0.78 1.745-1.745s-0.783-1.745-1.745-1.745z"></path>
+</symbol>
+<symbol id="icon-search" viewBox="0 0 32 32">
+<path d="M5.839 14.4c0-4.728 3.832-8.56 8.56-8.56s8.56 3.832 8.56 8.56-3.832 8.56-8.56 8.56c-4.728 0-8.56-3.832-8.56-8.56zM14.399 3.76c-5.876 0-10.64 4.764-10.64 10.64s4.764 10.64 10.64 10.64c2.786 0 5.322-1.071 7.219-2.824 0.042 0.069 0.093 0.134 0.152 0.193l5.692 5.692c0.406 0.406 1.065 0.406 1.471 0s0.406-1.065 0-1.471l-5.693-5.692c-0.087-0.087-0.186-0.156-0.292-0.206 1.313-1.769 2.089-3.961 2.089-6.333 0-5.876-4.764-10.64-10.64-10.64z"></path>
+</symbol>
+<symbol id="icon-user" viewBox="0 0 32 32">
+<path d="M16.013 15.605c-3.518 0-6.382-2.864-6.382-6.382s2.864-6.381 6.382-6.381 6.381 2.862 6.381 6.381-2.862 6.382-6.381 6.382zM16.013 4.762c-2.461 0-4.462 2-4.462 4.461s2.002 4.462 4.462 4.462c2.461 0 4.462-2.002 4.462-4.462s-2.002-4.461-4.462-4.461z"></path>
+<path d="M22.43 29.158h-12.835c-1.037 0-1.989-0.475-2.61-1.304-0.622-0.83-0.813-1.875-0.523-2.87l0.533-1.824c1.163-3.982 4.87-6.763 9.018-6.763 4.149 0 7.856 2.781 9.019 6.763l0.531 1.824c0.291 0.995 0.101 2.042-0.522 2.87s-1.574 1.304-2.611 1.304zM16.013 18.315c-3.301 0-6.25 2.214-7.174 5.381l-0.533 1.824c-0.12 0.41-0.042 0.838 0.214 1.181 0.256 0.341 0.648 0.538 1.074 0.538h12.834c0.427 0 0.819-0.197 1.075-0.538s0.334-0.771 0.214-1.181l-0.531-1.824c-0.922-3.166-3.874-5.381-7.173-5.381z"></path>
+</symbol>
+<symbol id="icon-basket" viewBox="0 0 32 32">
+<path d="M27.061 10.176h-3.955v-0.269c0-3.245-2.63-5.875-5.875-5.875h-2.458c-3.245 0-5.875 2.63-5.875 5.875v0.269h-3.957c-1.21 0-2.189 0.979-2.189 2.189v9.83c0 3.923 3.181 7.104 7.104 7.104h12.29c3.923 0 7.104-3.181 7.104-7.104v-9.829c0-1.21-0.981-2.19-2.189-2.19zM10.818 9.907c0-2.184 1.771-3.955 3.955-3.955h2.458c2.184 0 3.955 1.771 3.955 3.955v0.269h-10.368v-0.269zM27.33 22.197c0 2.864-2.322 5.184-5.184 5.184h-12.29c-2.864 0-5.184-2.322-5.184-5.184v-9.83c0-0.149 0.12-0.269 0.269-0.269h3.957v1.498c0 0.53 0.43 0.96 0.96 0.96s0.96-0.43 0.96-0.96v-1.499h10.368v1.498c0 0.53 0.43 0.96 0.96 0.96s0.96-0.43 0.96-0.96v-1.498h3.955c0.149 0 0.269 0.12 0.269 0.269v9.832z"></path>
+</symbol>
+<symbol id="icon-delete" viewBox="0 0 32 32">
+<path d="M29.303 6.629h-5.529v-1.296c0-1.001-0.407-1.984-1.115-2.693-0.718-0.722-1.675-1.118-2.695-1.118h-5.333c-1.001 0-1.984 0.407-2.693 1.115-0.711 0.709-1.115 1.691-1.115 2.693v1.298h-5.52v2.743h1.518v17.294c0 1.017 0.395 1.975 1.115 2.695 0.709 0.711 1.691 1.115 2.693 1.115h13.333c1.017 0 1.975-0.398 2.695-1.115s1.115-1.675 1.115-2.695v-17.294h1.529v-2.743zM13.106 5.333c0-0.4 0.162-0.793 0.446-1.077s0.677-0.446 1.077-0.446h5.333c0.402 0 0.795 0.162 1.079 0.446s0.446 0.677 0.446 1.077v1.296h-8.379v-1.296zM25.488 26.665c0 0.402-0.162 0.795-0.446 1.079s-0.677 0.446-1.079 0.446h-13.333c-0.4 0-0.793-0.162-1.077-0.446s-0.446-0.677-0.446-1.079v-17.294h16.382v17.294z"></path>
+<path d="M13.499 14.665h2.286v8h-2.286v-8z"></path>
+<path d="M18.821 14.665h2.286v8h-2.286v-8z"></path>
+</symbol>
+<symbol id="icon-transport" viewBox="0 0 32 32">
+<path d="M30.019 16.899l-2.951-5.247h-6.381v-2.667h-18.704v14.704h2.736c0.317 1.52 1.668 2.667 3.28 2.667s2.964-1.146 3.281-2.667l9.438 0.001c0.317 1.52 1.667 2.666 3.281 2.666 1.613 0 2.962-1.146 3.28-2.666h2.739v-6.791zM7.999 24.985c-1.085 0-1.967-0.877-1.979-1.958v-0.044c0.012-1.082 0.894-1.959 1.979-1.959 1.093 0 1.981 0.889 1.981 1.981s-0.89 1.98-1.981 1.98zM11.28 22.318c-0.318-1.52-1.668-2.666-3.28-2.666s-2.962 1.146-3.28 2.666h-1.365v-11.962h15.962v1.296h-0.001v10.666h-8.035zM23.999 24.985c-1.090 0-1.976-0.884-1.98-1.971v-0.017c0.005-1.089 0.89-1.972 1.98-1.972 1.092 0 1.98 0.889 1.98 1.981 0 1.091-0.889 1.979-1.98 1.979zM28.647 22.319h-1.368c-0.317-1.521-1.667-2.667-3.28-2.667s-2.964 1.146-3.281 2.667h-0.031v-9.296h5.58l2.381 4.235v5.061z"></path>
+</symbol>
+<symbol id="icon-box-alt" viewBox="0 0 31 32">
+<path d="M25.296 27.365h-19.482v-15.593h19.482v15.593zM7.148 26.032h16.815v-12.926h-16.815v12.926z"></path>
+<path d="M26.593 13.106h-22.074v-6.518h22.074v6.518zM5.852 11.772h19.407v-3.852h-19.407v3.852z"></path>
+<path d="M20.111 20.884h-9.111v-5.222h9.111v5.222zM12.333 19.55h6.444v-2.556h-6.444v2.556z"></path>
+</symbol>
+<symbol id="icon-star" viewBox="0 0 32 32">
+<path d="M14.462 2.135c0.62-1.29 2.457-1.29 3.077 0l3.307 6.884c0.249 0.518 0.741 0.876 1.311 0.952l7.569 1.018c1.418 0.191 1.986 1.938 0.951 2.926l-5.525 5.272c-0.416 0.397-0.604 0.976-0.501 1.541l1.371 7.513c0.257 1.408-1.229 2.488-2.489 1.809l-6.722-3.625c-0.506-0.273-1.115-0.273-1.62 0l-6.722 3.625c-1.26 0.679-2.746-0.4-2.489-1.809l1.371-7.513c0.103-0.565-0.085-1.144-0.501-1.541l-5.525-5.272c-1.036-0.988-0.468-2.735 0.951-2.926l7.569-1.018c0.569-0.077 1.062-0.435 1.311-0.952l3.307-6.884z"></path>
+</symbol>
+<symbol id="icon-heart-stroke" viewBox="0 0 32 32">
+<path d="M16 27.282l-10.314-10.136c-1.326-1.302-2.086-3.106-2.086-4.952s0.76-3.65 2.086-4.954c2.678-2.63 7.34-2.632 10.020 0l0.294 0.292 0.294-0.29c0.666-0.652 1.44-1.162 2.302-1.512 1.726-0.704 3.692-0.704 5.418 0 0.866 0.354 1.64 0.864 2.3 1.512 0.666 0.656 1.184 1.418 1.542 2.27 0.362 0.852 0.542 1.756 0.542 2.682s-0.182 1.83-0.542 2.684c-0.356 0.848-0.876 1.614-1.542 2.268l-10.314 10.136zM10.696 7.6c-1.24 0-2.454 0.494-3.328 1.352-0.882 0.868-1.368 2.018-1.368 3.242 0 1.222 0.486 2.374 1.368 3.242l8.632 8.482 8.632-8.484c0.438-0.43 0.778-0.93 1.010-1.488 0.236-0.56 0.358-1.148 0.358-1.752s-0.122-1.194-0.356-1.75c-0.234-0.558-0.576-1.060-1.014-1.49-0.436-0.43-0.95-0.766-1.524-1-1.144-0.466-2.46-0.466-3.606 0-0.57 0.232-1.084 0.568-1.526 1l-1.974 1.942-1.978-1.942c-0.888-0.872-2.068-1.354-3.326-1.354z"></path>
+</symbol>
+<symbol id="icon-heart-fill" viewBox="0 0 32 32">
+<path d="M27.858 9.508c-0.362-0.854-0.88-1.618-1.542-2.266-0.662-0.652-1.438-1.16-2.3-1.512-1.726-0.704-3.692-0.704-5.418 0-0.866 0.354-1.64 0.864-2.3 1.512l-0.298 0.29-0.294-0.29c-2.68-2.632-7.342-2.632-10.020 0-1.324 1.302-2.086 3.106-2.086 4.952 0 1.844 0.76 3.65 2.086 4.952l10.314 10.136 10.312-10.132c0.664-0.652 1.184-1.416 1.544-2.27 0.362-0.856 0.544-1.76 0.544-2.686s-0.182-1.83-0.542-2.686z"></path>
+</symbol>
+<symbol id="icon-heart" viewBox="0 0 32 32">
+<path d="M16 26.946l-10.146-9.97c-1.299-1.277-2.014-2.976-2.014-4.782 0-1.781 0.734-3.523 2.014-4.781 1.293-1.272 3.013-1.973 4.842-1.973s3.547 0.701 4.84 1.973l0.464 0.454 0.464-0.454c0.64-0.63 1.389-1.122 2.224-1.462 1.669-0.678 3.565-0.678 5.235 0 0.834 0.339 1.581 0.83 2.222 1.461s1.142 1.366 1.491 2.19c0.347 0.83 0.523 1.701 0.523 2.592 0 0.893-0.174 1.763-0.523 2.589-0.347 0.824-0.848 1.562-1.49 2.192l-10.147 9.971zM10.696 7.362c-1.302 0-2.576 0.518-3.496 1.421-0.93 0.912-1.44 2.123-1.44 3.411s0.51 2.501 1.438 3.413l8.8 8.648 8.8-8.65c0.459-0.451 0.819-0.979 1.067-1.568 0.248-0.587 0.374-1.208 0.374-1.843 0-0.634-0.126-1.256-0.373-1.845-0.248-0.587-0.608-1.115-1.067-1.566-0.461-0.453-1-0.806-1.602-1.051-1.206-0.493-2.581-0.493-3.787 0-0.603 0.245-1.141 0.598-1.602 1.051l-1.81 1.778-1.808-1.778c-0.92-0.904-2.194-1.421-3.496-1.421z"></path>
+</symbol>
+<symbol id="icon-instagram" viewBox="0 0 32 32">
+<path d="M16 18.703c-1.449 0-2.703-1.159-2.703-2.703 0-1.449 1.159-2.703 2.703-2.703 1.449 0 2.703 1.159 2.703 2.703 0 1.449-1.255 2.703-2.703 2.703z"></path>
+<path d="M19.283 9.434c0.653 0 1.030 0.138 1.306 0.238 0.051 0.019 0.097 0.035 0.142 0.051 0.079 0.041 0.157 0.077 0.23 0.111 0.278 0.13 0.506 0.238 0.736 0.468 0.289 0.29 0.482 0.58 0.578 0.967 0.097 0.29 0.193 0.676 0.29 1.449v6.566c0 0.652-0.138 1.030-0.239 1.305-0.019 0.051-0.035 0.097-0.051 0.142-0.041 0.081-0.077 0.157-0.111 0.23-0.13 0.278-0.238 0.506-0.468 0.736-0.29 0.289-0.579 0.483-0.966 0.579-0.29 0.097-0.676 0.193-1.449 0.29h-6.566c-0.652 0-1.030-0.138-1.305-0.239-0.051-0.019-0.097-0.035-0.142-0.051-0.081-0.041-0.157-0.077-0.23-0.111-0.278-0.13-0.506-0.238-0.736-0.468-0.29-0.29-0.483-0.579-0.579-0.966-0.096-0.29-0.193-0.676-0.289-1.449v-6.566c0-0.652 0.138-1.030 0.239-1.305 0.018-0.051 0.035-0.098 0.051-0.143 0.040-0.079 0.076-0.157 0.11-0.23 0.131-0.277 0.239-0.506 0.468-0.736 0.29-0.289 0.58-0.482 0.966-0.579 0.29-0.096 0.676-0.193 1.449-0.289h6.566zM16 11.849c-2.317 0-4.151 1.834-4.151 4.151s1.834 4.152 4.151 4.152 4.152-1.835 4.152-4.152-1.835-4.151-4.152-4.151zM21.214 11.752c0-0.533-0.433-0.966-0.966-0.966s-0.966 0.433-0.966 0.966c0 0.533 0.433 0.966 0.966 0.966s0.966-0.433 0.966-0.966z"></path>
+<path d="M0.552 16c0 8.532 6.916 15.448 15.448 15.448s15.448-6.916 15.448-15.448c0-8.532-6.916-15.448-15.448-15.448s-15.448 6.916-15.448 15.448zM12.717 7.987h6.566c0.87 0.096 1.449 0.193 1.931 0.386 0.579 0.289 0.966 0.482 1.449 0.966 0.483 0.482 0.772 0.966 0.966 1.448 0.193 0.483 0.386 1.063 0.386 1.931v6.566c-0.097 0.87-0.193 1.449-0.386 1.931-0.29 0.579-0.483 0.966-0.966 1.449s-0.966 0.772-1.449 0.966c-0.483 0.193-1.062 0.386-1.931 0.386h-6.566c-0.868-0.097-1.449-0.193-1.931-0.386-0.579-0.29-0.966-0.483-1.449-0.966s-0.772-0.966-0.966-1.449c-0.193-0.483-0.386-1.062-0.386-1.931v-6.566c0.096-0.868 0.193-1.449 0.386-1.931 0.29-0.579 0.483-0.966 0.966-1.448 0.483-0.483 0.966-0.772 1.449-0.966 0.482-0.194 1.063-0.386 1.931-0.386z"></path>
+</symbol>
+<symbol id="icon-facebook" viewBox="0 0 33 32">
+<path d="M16.571 0c-8.837 0-16 7.163-16 16s7.163 16 16 16 16-7.163 16-16-7.163-16-16-16zM17.672 24v-5.699h1.899l0.4-2.301h-2.2v-1.501c0-0.6 0.301-1.2 1.301-1.2h1v-2c0 0-0.899-0.2-1.8-0.2-1.8 0-3 1.099-3 3.099v1.801h-2v2.301h2v5.6c-3.801-0.6-6.701-3.901-6.701-7.901 0-4.4 3.6-8 8-8s8 3.6 8 8c0 4-2.899 7.4-6.899 8z"></path>
+</symbol>
+<symbol id="icon-youtube" viewBox="0 0 33 32">
+<path d="M19.171 16l-4.2-2.4v4.8l4.2-2.4z"></path>
+<path d="M0.571 16c0 8.837 7.163 16 16 16s16-7.163 16-16c0-8.837-7.163-16-16-16s-16 7.163-16 16zM22.771 10.701c0.701 0.2 1.2 0.701 1.4 1.4 0.4 1.299 0.4 3.899 0.4 3.899s0 2.6-0.301 3.901c-0.2 0.699-0.699 1.2-1.4 1.4-1.299 0.299-6.299 0.299-6.299 0.299s-5.099 0-6.299-0.299c-0.701-0.2-1.2-0.701-1.4-1.4-0.301-1.301-0.301-3.901-0.301-3.901s0-2.6 0.2-3.901c0.2-0.699 0.701-1.199 1.4-1.399 1.301-0.301 6.301-0.301 6.301-0.301s5.099 0 6.299 0.301z"></path>
+</symbol>
+<symbol id="icon-twitter" viewBox="0 0 32 32">
+<path d="M16 0.552c-8.532 0-15.448 6.916-15.448 15.448s6.916 15.448 15.448 15.448 15.448-6.916 15.448-15.448-6.916-15.448-15.448-15.448zM22.083 12.813c0.193 4.537-3.090 9.462-8.98 9.462-1.738 0-3.38-0.579-4.828-1.449 1.641 0.193 3.38-0.29 4.537-1.159-1.449 0-2.606-0.966-2.993-2.221 0.483 0.097 0.966 0 1.449-0.097-1.449-0.386-2.51-1.738-2.51-3.186 0.483 0.193 0.966 0.386 1.449 0.386-1.352-0.966-1.834-2.799-0.966-4.248 1.641 1.931 3.959 3.186 6.566 3.283-0.483-1.931 1.062-3.862 3.090-3.862 0.868 0 1.738 0.386 2.317 0.966 0.772-0.193 1.449-0.386 2.028-0.772-0.193 0.772-0.675 1.352-1.352 1.738 0.675-0.097 1.255-0.193 1.834-0.483-0.387 0.678-0.967 1.258-1.642 1.643z"></path>
+</symbol>
+<symbol id="icon-checked-large" viewBox="0 0 32 32">
+<path d="M27.5 8.638l-14.279 17.731c-0.39 0.44-0.933 0.666-1.481 0.666-0.434 0-0.871-0.143-1.236-0.435l-5.762-5.928c-0.853-0.684-0.992-1.933-0.309-2.789s1.929-0.995 2.782-0.311l4.295 4.75 13.031-16.323c0.724-0.82 1.977-0.893 2.794-0.165 0.817 0.729 0.892 1.984 0.165 2.803z"></path>
+</symbol>
+<symbol id="icon-checkbox" viewBox="0 0 32 32">
+<path d="M11.2 27.315l-9.651-10.528 3.302-3.027 6.349 6.925 15.949-17.398 3.302 3.027z"></path>
+</symbol>
+<symbol id="icon-chevron-bottom-thin" viewBox="0 0 32 32">
+<path d="M16 21.2c-0.307 0-0.614-0.117-0.848-0.352l-8-8c-0.469-0.469-0.469-1.229 0-1.698s1.229-0.469 1.698 0l7.152 7.152 7.152-7.152c0.469-0.469 1.229-0.469 1.698 0s0.469 1.229 0 1.698l-8 8c-0.237 0.235-0.544 0.352-0.851 0.352z"></path>
+</symbol>
+<symbol id="icon-chevron-left-thin" viewBox="0 0 32 32">
+<path d="M10.8 16c0-0.307 0.117-0.614 0.352-0.848l8-8c0.469-0.469 1.229-0.469 1.698 0s0.469 1.229 0 1.698l-7.152 7.15 7.152 7.152c0.469 0.469 0.469 1.229 0 1.698s-1.229 0.469-1.698 0l-8-8c-0.235-0.235-0.352-0.542-0.352-0.85z"></path>
+</symbol>
+<symbol id="icon-chevron-right-thin" viewBox="0 0 32 32">
+<path d="M21.202 16.002c0 0.307-0.117 0.614-0.352 0.848l-8 8c-0.469 0.469-1.229 0.469-1.698 0s-0.469-1.229 0-1.698l7.152-7.152-7.152-7.152c-0.469-0.469-0.469-1.229 0-1.698s1.229-0.469 1.698 0l8 8c0.235 0.237 0.352 0.544 0.352 0.851z"></path>
+</symbol>
+<symbol id="icon-chevron-top-thin" viewBox="0 0 32 32">
+<path d="M16.003 10.798c0.307 0 0.614 0.117 0.848 0.352l8 8c0.469 0.469 0.469 1.229 0 1.698s-1.229 0.469-1.698 0l-7.152-7.152-7.152 7.152c-0.469 0.469-1.229 0.469-1.698 0s-0.469-1.229 0-1.698l8-8c0.237-0.235 0.544-0.352 0.851-0.352z"></path>
+</symbol>
+<symbol id="icon-chevron-bottom" viewBox="0 0 32 32">
+<path d="M6.286 11.998c0-0.439 0.167-0.878 0.503-1.211 0.67-0.67 1.755-0.67 2.425 0l6.786 6.786 6.789-6.786c0.67-0.67 1.755-0.67 2.425 0s0.67 1.755 0 2.425l-8 8c-0.67 0.67-1.755 0.67-2.425 0l-8-8c-0.336-0.336-0.503-0.775-0.503-1.214z"></path>
+</symbol>
+<symbol id="icon-chevron-left" viewBox="0 0 32 32">
+<path d="M20.002 6.283c0.439 0 0.878 0.167 1.211 0.503 0.67 0.67 0.67 1.755 0 2.425l-6.786 6.786 6.786 6.789c0.67 0.67 0.67 1.755 0 2.425s-1.755 0.67-2.425 0l-8-8c-0.67-0.67-0.67-1.755 0-2.425l8-8c0.336-0.336 0.775-0.503 1.214-0.503z"></path>
+</symbol>
+<symbol id="icon-chevron-right" viewBox="0 0 32 32">
+<path d="M12 25.714c-0.439 0-0.878-0.167-1.211-0.503-0.67-0.67-0.67-1.755 0-2.425l6.786-6.786-6.786-6.789c-0.67-0.67-0.67-1.755 0-2.425s1.755-0.67 2.425 0l8 8c0.67 0.67 0.67 1.755 0 2.425l-8 8c-0.336 0.336-0.775 0.503-1.214 0.503z"></path>
+</symbol>
+<symbol id="icon-chevron-top" viewBox="0 0 32 32">
+<path d="M25.717 20c0 0.439-0.167 0.878-0.503 1.211-0.67 0.67-1.755 0.67-2.425 0l-6.786-6.786-6.789 6.786c-0.67 0.67-1.755 0.67-2.425 0s-0.67-1.755 0-2.425l8-8c0.67-0.67 1.755-0.67 2.425 0l8 8c0.336 0.336 0.503 0.775 0.503 1.214z"></path>
+</symbol>
+<symbol id="icon-arrow-left" viewBox="0 0 32 32">
+<path d="M16.002 5.067c0.409 0 0.818 0.155 1.131 0.469 0.624 0.624 0.624 1.639 0 2.263l-6.603 6.601h14.805c0.885 0 1.6 0.715 1.6 1.6s-0.715 1.6-1.6 1.6h-14.805l6.603 6.601c0.624 0.624 0.624 1.639 0 2.263s-1.639 0.624-2.263 0l-9.333-9.333c-0.302-0.299-0.471-0.706-0.471-1.131s0.169-0.832 0.469-1.131l9.333-9.333c0.313-0.313 0.722-0.469 1.134-0.469z"></path>
+</symbol>
+<symbol id="icon-arrow-right" viewBox="0 0 32 32">
+<path d="M16 26.933c-0.409 0-0.818-0.155-1.131-0.469-0.624-0.624-0.624-1.639 0-2.263l6.603-6.601h-14.805c-0.885 0-1.6-0.715-1.6-1.6s0.715-1.6 1.6-1.6h14.805l-6.603-6.601c-0.624-0.624-0.624-1.639 0-2.263s1.639-0.624 2.263 0l9.333 9.333c0.302 0.299 0.471 0.706 0.471 1.131s-0.169 0.832-0.469 1.131l-9.333 9.333c-0.313 0.313-0.722 0.469-1.134 0.469z"></path>
+</symbol>
+</defs>
+</svg>
+    <div class="bg-light" id="wrapper">
+      <header class="navbar flex-wrap" id="header">
+        <div class="navbar-container container-xxl">
+          <div class="row justify-content-between align-items-center flex-grow-1 gx-0 gx-ph-2">
+            <div class="column-left col-6 col-lg-3">
+              <div class="row align-items-center gx-0">
+                <div class="col-auto">
+                  <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"><span class="navbar-toggler-icon"><span>&nbsp;</span><span class="visually-hidden">Close nav</span></span></button>
+                </div>
+                <div class="col"><a class="navbar-brand" href="#"><img src="images/logo.svg" alt="NEWITTS" width="141" height="20"></a></div>
+              </div>
+            </div>
+            <div class="column-center col-auto col-lg-6 px-0 px-lg-2">
+              <div class="form-container form-container-opener">
+                <button class="offcanvas-opener border-0 bg-transparent position-absolute z-3 top-0 start-0 bottom-0 end-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTopSearch" aria-controls="offcanvasTopSearch"><span class="visually-hidden">Open search</span></button>
+                <form class="d-flex position-relative z-0" role="search">
+                  <div class="search-box input-group"><span class="input-group-text" id="search-header_01"><svg class="icon icon-search"><use xlink:href="#icon-search"></use></svg><span class="name"> icon-search</span></span>
+                    <input class="form-control" type="search" placeholder="Search for products" aria-label="Search" aria-describedby="search-header_01">
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="column-right col-6 col-lg-3">
+              <ul class="nav-icons navbar-nav d-flex flex-row justify-content-end">
+                <li class="nav-item"><a class="nav-link" href="#"><svg class="icon icon-user"><use xlink:href="#icon-user"></use></svg><span class="name"> icon-user</span></a></li>
+                <li class="nav-item"><a class="nav-link" href="#"><svg class="icon icon-heart"><use xlink:href="#icon-heart"></use></svg><span class="name"> icon-heart</span></a></li>
+                <li class="nav-item"><a class="nav-link" href="#"><svg class="icon icon-basket"><use xlink:href="#icon-basket"></use></svg><span class="name"> icon-basket</span></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="offcanvas-nav offcanvas_main offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbar">
+          <div class="offcanvas-header justify-content-start">
+            <button class="btn-close" type="button" data-bs-dismiss="offcanvas" aria-label="Close"><span class="visually-hidden">Close nav</span></button><a class="navbar-brand" href="#"><img src="images/logo.svg" alt="NEWITTS" width="141" height="20"></a>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="navbar-mega" id="navbar_mega">
+              <ul class="navbar-nav">
+                <li class="nav-item nav-item__main"><a class="nav-link" href="#">Sports</a>
+                  <div class="dropdown-menu dropdown-menu__first border-0">
+                    <div class="form-holder">
+                      <div class="search-box input-group"><span class="input-group-text" id="search-header_02"><svg class="icon icon-search"><use xlink:href="#icon-search"></use></svg><span class="name"> icon-search</span></span>
+                        <input class="form-control" type="search" placeholder="Search for sports" aria-label="Search" aria-describedby="search-header_02">
+                      </div>
+                    </div>
+                    <div class="scrollable-area">
+                      <ul class="navbar-nav">
+                        <li class="nav-item nav-item__first"><a class="nav-link" href="#">American footbal</a></li>
+                        <li class="nav-item nav-item__first"><a class="nav-link" href="#">Athletics Equipment</a></li>
+                        <li class="nav-item nav-item__first"><a class="nav-link" href="#">Badminton</a>
+                          <div class="dropdown-menu dropdown-menu__second border-0">
+                            <div class="scrollable-area">
+                              <ul class="navbar-nav">
+                                <li class="nav-item nav-item__second"><a class="nav-link" href="#">Badminton Rackets</a></li>
+                                <li class="nav-item nav-item__second"><a class="nav-link" href="#">Badminton Shuttlecocks</a></li>
+                                <li class="nav-item nav-item__second"><a class="nav-link" href="#">Badminton Posts</a></li>
+                                <li class="nav-item nav-item__second"><a class="nav-link" href="#">Badminton Nets</a></li>
+                              </ul>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="nav-item nav-item__first"><a class="nav-link" href="#">Baseball</a></li>
+                        <li class="nav-item nav-item__first"><a class="nav-link" href="#">Basketball</a>
+                          <div class="dropdown-menu dropdown-menu__second border-0">
+                            <div class="scrollable-area">
+                              <ul class="navbar-nav">
+                                <li class="nav-item nav-item__second"><a class="nav-link" href="#">View all</a></li>
+                                <li class="nav-item nav-item__second"><a class="nav-link" href="#">Basketballs</a></li>
+                                <li class="nav-item nav-item__second"><a class="nav-link" href="#">Basketball Hoops</a></li>
+                                <li class="nav-item nav-item__second"><a class="nav-link" href="#">Basketball Backboards</a></li>
+                                <li class="nav-item nav-item__second"><a class="nav-link" href="#">Basketball Rings</a></li>
+                                <li class="nav-item nav-item__second"><a class="nav-link" href="#">Basketball Clothing</a></li>
+                              </ul>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="nav-item nav-item__first"><a class="nav-link" href="#">Bouldering</a></li>
+                        <li class="nav-item nav-item__first"><a class="nav-link" href="#">Boxing</a>
+                          <div class="dropdown-menu dropdown-menu__second border-0">
+                            <div class="scrollable-area">
+                              <ul class="navbar-nav">
+                                <li class="nav-item nav-item__second"><a class="nav-link" href="#">View all</a></li>
+                                <li class="nav-item nav-item__second"><a class="nav-link" href="#">Boxing Clothing &amp; Footwear</a></li>
+                                <li class="nav-item nav-item__second"><a class="nav-link" href="#">Boxing Equipment</a></li>
+                                <li class="nav-item nav-item__second"><a class="nav-link" href="#">Boxing Protection</a></li>
+                                <li class="nav-item nav-item__second"><a class="nav-link" href="#">Punch Bags</a></li>
+                              </ul>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="nav-item nav-item__first"><a class="nav-link" href="#">Cricket</a>
+                          <div class="dropdown-menu dropdown-menu__second border-0">
+                            <div class="scrollable-area">
+                              <ul class="navbar-nav">
+                                <li class="nav-item nav-item__second"><a class="nav-link" href="#">View all</a></li>
+                                <li class="nav-item nav-item__second"><a class="nav-link" href="#">Cricket Equipment</a></li>
+                                <li class="nav-item nav-item__second"><a class="nav-link" href="#">Cricket Clothing and Shoes</a></li>
+                                <li class="nav-item nav-item__second"><a class="nav-link" href="#">Cricket Protection</a></li>
+                              </ul>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="nav-item nav-item__first"><a class="nav-link" href="#">Darts</a></li>
+                        <li class="nav-item nav-item__first"><a class="nav-link" href="#">Dodgeball</a>
+                          <div class="dropdown-menu dropdown-menu__second border-0">
+                            <div class="scrollable-area">
+                              <ul class="navbar-nav">
+                                <li class="nav-item nav-item__second"><a class="nav-link" href="#">Dodgeballs</a></li>
+                              </ul>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="nav-item nav-item__first"><a class="nav-link" href="#">Football</a>
+                          <div class="dropdown-menu dropdown-menu__second border-0">
+                            <div class="scrollable-area">
+                              <ul class="navbar-nav">
+                                <li class="nav-item nav-item__second"><a class="nav-link" href="#">View all</a></li>
+                                <li class="nav-item nav-item__second"><a class="nav-link" href="#">Football Goal Posts</a></li>
+                                <li class="nav-item nav-item__second"><a class="nav-link" href="#">Football Goal Post Accessories</a></li>
+                                <li class="nav-item nav-item__second"><a class="nav-link" href="#">Football Nets</a></li>
+                                <li class="nav-item nav-item__second"><a class="nav-link" href="#">Football Clothing</a></li>
+                                <li class="nav-item nav-item__second"><a class="nav-link" href="#">Referee Kit</a></li>
+                                <li class="nav-item nav-item__second"><a class="nav-link" href="#">Football Boots</a></li>
+                                <li class="nav-item nav-item__second"><a class="nav-link" href="#">Footballs</a></li>
+                                <li class="nav-item nav-item__second"><a class="nav-link" href="#">Football Bibs</a></li>
+                                <li class="nav-item nav-item__second"><a class="nav-link" href="#">Football Bags</a></li>
+                                <li class="nav-item nav-item__second"><a class="nav-link" href="#">Football Shin Guards</a></li>
+                                <li class="nav-item nav-item__second"><a class="nav-link" href="#">Football Training Equipment</a></li>
+                                <li class="nav-item nav-item__second"><a class="nav-link" href="#">Goalkeeper Gloves</a></li>
+                                <li class="nav-item nav-item__second"><a class="nav-link" href="#">Pitch Accessories</a></li>
+                              </ul>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="nav-item nav-item__first"><a class="nav-link" href="#">Golf</a></li>
+                        <li class="nav-item nav-item__first"><a class="nav-link" href="#">Gymnastics</a></li>
+                        <li class="nav-item nav-item__first"><a class="nav-link" href="#">Handball</a></li>
+                        <li class="nav-item nav-item__first"><a class="nav-link" href="#">Hockey</a></li>
+                        <li class="nav-item nav-item__first"><a class="nav-link" href="#">Kurling</a></li>
+                        <li class="nav-item nav-item__first"><a class="nav-link" href="#">Tennis</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+                <li class="nav-item nav-item__main"><a class="nav-link" href="#">Sports Brands</a></li>
+                <li class="nav-item nav-item__main"><a class="nav-link" href="#">Play Equipment</a></li>
+                <li class="nav-item nav-item__main"><a class="nav-link" href="#">Fitness</a></li>
+                <li class="nav-item nav-item__main"><a class="nav-link" href="#">Clearance</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <div class="offcanvas-search offcanvas_main offcanvas offcanvas-top" id="offcanvasTopSearch" tabindex="-1" aria-labelledby="offcanvasTopSearch">
+          <div class="offcanvas-header px-0">
+            <div class="container-xxl">
+              <div class="row justify-content-between align-items-center flex-grow-1 gx-35">
+                <div class="column-left col-6 col-lg-3 d-none d-lg-block">
+                  <div class="row align-items-center gx-0">
+                    <div class="col-auto"><span class="invisible navbar-toggler"><span class="navbar-toggler-icon"></span></span></div>
+                    <div class="col"><a class="navbar-brand" href="#"><img src="images/logo.svg" alt="NEWITTS" width="141" height="20"></a></div>
+                  </div>
+                </div>
+                <div class="column-center col col-lg-6">
+                  <div class="form-container">
+                    <form class="d-flex" role="search">
+                      <div class="search-box input-group">
+                        <input class="form-control" type="search" aria-label="Search brands" placeholder=" ">
+                        <div class="form-clear">
+                          <button class="btn-close btn-delete" type="reset" aria-label="Close">Close</button><span class="separator">|</span>
+                        </div>
+                        <button class="input-group-text" type="button" aria-label="Close"><svg class="icon icon-search"><use xlink:href="#icon-search"></use></svg><span class="name"> icon-search</span></button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                <div class="column-right col-auto col-lg-3 position-relative">
+                  <button class="btn-close" type="button" data-bs-dismiss="offcanvas" aria-label="Close"><span class="visually-hidden">Close nav</span></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="offcanvas-body">
+            <div class="container-xxl">
+              <div class="row flex-grow-1 gx-5">
+                <div class="column-left col-lg-3">
+                  <div class="row align-items-center gx-0">
+                    <div class="col-auto d-none d-lg-block"><span class="invisible navbar-toggler"><span class="navbar-toggler-icon"></span></span></div>
+                    <div class="col">
+                      <div class="search-results"><strong class="d-block fw-medium text-light-600">Categories</strong>
+                        <hr class="border opacity-50">
+                        <ul class="list-categories nav flex-column">
+                          <li class="nav-item"><a class="nav-link" href="#">Ballet Equipment</a></li>
+                          <li class="nav-item"><a class="nav-link" href="#">Ball Pumps</a></li>
+                          <li class="nav-item"><a class="nav-link" href="#">Ball Bags</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="column-center col-lg-6">
+                  <div class="search-cards-container">
+                    <div class="row row-cols-1 row-cols-sph-2 row-cols-md-3 gx-17 gx-lg-35">
+                      <div class="col">
+                        <div class="card-product card mb-5 shadow-none">
+                          <div class="card-img"><a href="#"> 
+                              <picture>
+                                <source srcset="images/img-card_product-06-m.jpg, images/img-card_product-06-m@2x.jpg 2x" media="(max-width: 767px)"/>
+                                <source srcset="images/img-card_product-06-t.jpg, images/img-card_product-06-t@2x.jpg 2x" media="(max-width: 991px)"/>
+                                <source srcset="images/img-card_product-06-d.jpg, images/img-card_product-06-d@2x.jpg 2x"/><img src="images/img-card_product-06-d.jpg" alt="image description" width="154" height="154"/>
+                              </picture></a>
+                          </div>
+                          <div class="card-body">
+                            <h3 class="card-title"><a href="#">Gray Nicolls  Originals</a></h3>
+                            <div class="price-wrap"><span class="price">£24.00</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="card-product card mb-5 shadow-none">
+                          <div class="card-img"><a href="#"> 
+                              <picture>
+                                <source srcset="images/img-card_product-05-m.jpg, images/img-card_product-05-m@2x.jpg 2x" media="(max-width: 767px)"/>
+                                <source srcset="images/img-card_product-05-t.jpg, images/img-card_product-05-t@2x.jpg 2x" media="(max-width: 991px)"/>
+                                <source srcset="images/img-card_product-05-d.jpg, images/img-card_product-05-d@2x.jpg 2x"/><img src="images/img-card_product-05-d.jpg" alt="image description" width="154" height="154"/>
+                              </picture></a>
+                          </div>
+                          <div class="card-body">
+                            <h3 class="card-title"><a href="#">Gray Nicolls  Originals</a></h3>
+                            <div class="price-wrap"><span class="price">£24.00</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="card-product card mb-5 shadow-none">
+                          <div class="card-img"><a href="#"> 
+                              <picture>
+                                <source srcset="images/img-card_product-07-m.jpg, images/img-card_product-07-m@2x.jpg 2x" media="(max-width: 767px)"/>
+                                <source srcset="images/img-card_product-07-t.jpg, images/img-card_product-07-t@2x.jpg 2x" media="(max-width: 991px)"/>
+                                <source srcset="images/img-card_product-07-d.jpg, images/img-card_product-07-d@2x.jpg 2x"/><img src="images/img-card_product-07-d.jpg" alt="image description" width="154" height="154"/>
+                              </picture></a>
+                          </div>
+                          <div class="card-body">
+                            <h3 class="card-title"><a href="#">Gray Nicolls  Originals</a></h3>
+                            <div class="price-wrap"><span class="price">£24.00</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="column-right col-auto col-lg-3 d-none d-lg-block"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main id="main">
+        <div class="section-checkout-list section text-center py-3 pt-xl-0 pb-xl-2">
+          <div class="container-xxl">
+            <ol class="steps-checkout row justify-content-center d-inline-flex gx-3">
+              <li class="col step-checked"><a class="step-name" href="#">Basket</a></li>
+              <li class="col step-checked"><a class="step-name" href="#">Delivery Details</a></li>
+              <li class="col step-active"><a class="step-name" href="#">Pay</a></li>
+              <li class="col"><a class="step-name" href="#">Complete</a></li>
+            </ol>
+          </div>
+        </div>
+        <section class="section py-3">
+          <div class="container-xxl">
+            <div class="row justify-content-center">
+              <div class="column-center-main col-lg-9">
+                <div class="twocolumns-sidebar-right row gx-35">
+                  <div class="col-lg-7" id="content">
+                    <div class="card-contact card-fullwidth-m card card-noshadow-mobile border-0 mb-53 mb-md-35">
+                      <div class="card-header border-bottom-0 pt-33 pb-0">
+                        <div class="border-bottom">
+                          <div class="row-title pb-2">
+                            <h2 class="h5">Payment details</h2><small class="fw-medium d-block text-secondary mb-xl-12">Enter your payment details and click Confirm Order</small>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card-body">
+                        <div class="row gx-3 gy-3">
+                          <div class="col-12">
+                            <label class="form-label" for="payment_card_number">Credit or debit card number</label>
+                            <input class="form-control" id="payment_card_number" type="tel" placeholder="0000 0000 0000 0000">
+                          </div>
+                          <div class="col-md-6">
+                            <label class="form-label" for="payment_card_expiry_date">Expiry date</label>
+                            <input class="form-control" id="payment_card_expiry_date" type="text" placeholder="MM/YY">
+                          </div>
+                          <div class="col-md-6">
+                            <label class="form-label" for="payment_card_cvc">CVC</label>
+                            <input class="form-control" id="payment_card_cvc" type="tel" placeholder="CVC">
+                          </div>
+                          <div class="col-12">
+                            <div class="pt-15">
+                              <button class="btn-checkout btn btn-lg btn-warning text-white w-100 mb-3" type="submit"> <span class="ico-holder">
+                                  <svg class="icon icon-creditcard">
+                                    <use xlink:href="#icon-creditcard"></use>
+                                  </svg><span class="name"> icon-creditcard</span></span><strong class="h6 fw-bold text-white text-uppercase mb-0">Confirm order</strong></button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-partners-logo card-fullwidth-m card card-noshadow-mobile border-0 mb-53 mb-md-35">
+                      <div class="card-body">
+                        <div class="py-1">
+                          <div class="row gx-35">
+                            <div class="col-auto">
+                              <div class="img-holder rounded-1 overflow-hidden"><img src="./images/logo-stripe.png" srcset="./images/logo-stripe@2x.png 2x" alt="Powered by Stripe" width="124" height="34"/>
+                              </div>
+                            </div>
+                            <div class="col-auto">
+                              <div class="img-holder"><img src="./images/logo-pci-dss-compliant.png" srcset="./images/logo-pci-dss-compliant@2x.png 2x" alt="pci DSS Compliant" width="89" height="34"/>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="sidebar col-lg-5">
+                    <div class="sidebar_sticky_order">
+                      <div class="sidebar_inner">
+                        <section class="card-order card-fullwidth-m card card-noshadow-mobile border-0 mb-4">
+                          <div class="card-header border-bottom-0 pb-lg-0">
+                            <div class="border-bottom py-3 pb-xl-4">
+                              <h3 class="card-title mb-0">Your order</h3>
+                            </div>
+                          </div>
+                          <div class="card-body">
+                            <table class="table table-order fw-semibold mb-0">
+                              <tbody>
+                                <tr>
+                                  <td>Item total</td>
+                                  <td>£2,836.00</td>
+                                </tr>
+                                <tr>
+                                  <td>VAT (20%)</td>
+                                  <td>£124.00</td>
+                                </tr>
+                                <tr>
+                                  <td>Shipping</td>
+                                  <td>Free</td>
+                                </tr>
+                                <tr>
+                                  <td>Discount</td>
+                                  <td><span class="opacity-60">None</span></td>
+                                </tr>
+                              </tbody>
+                              <tfoot>
+                                <tr>
+                                  <td><strong class="fw-bold">Total</strong></td>
+                                  <td><strong class="lead fw-bold text-danger">£3,142.95</strong></td>
+                                </tr>
+                              </tfoot>
+                            </table>
+                          </div>
+                        </section>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <div id="footer">
+        <aside class="footer-top">
+          <div class="container-xxl">
+            <div class="footer-bar" id="foot-accordion">
+              <div class="row gx-xl-6">
+                <div class="col-lg-5 col-xl-4">
+                  <div class="foot-logo"><a href=""><img src="images/logo-white.svg" alt="newitts"></a></div>
+                  <form class="foot-form" action="#"> 
+                    <div class="form-text">Sign up to our newsletter and receive our latest bargains before anyone else.</div>
+                    <div class="search-box input-group">
+                      <input class="form-control" type="text" placeholder="Enter your email">
+                      <button class="input-group-text" type="submit">
+                        SUBSCRIBE<svg class="icon icon-arrow-right"><use xlink:href="#icon-arrow-right"></use></svg></button>
+                    </div>
+                  </form>
+                </div>
+                <div class="col-xl-8">
+                  <div class="footer-row row gx-2 gx-xll-54">
+                    <div class="col-lg-3">
+                      <div class="accordion-item">
+                        <button class="foot-accordion-opener accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">HELP</button>
+                        <div class="accordion-collapse collapse" id="collapseOne" data-bs-parent="#foot-accordion">
+                          <div class="accordion-body">
+                            <ul class="foot-menu">
+                              <li><a href="#">Contact us</a></li>
+                              <li><a href="#">FAQ's</a></li>
+                              <li><a href="#">Orders &amp; payments</a></li>
+                              <li><a href="#">Delivery costs</a></li>
+                              <li><a href="#">Returns policy</a></li>
+                              <li><a href="#">Site Map</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-3">
+                      <div class="accordion-item">
+                        <button class="foot-accordion-opener accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">NEWITTS</button>
+                        <div class="accordion-collapse collapse" id="collapseTwo" data-bs-parent="#foot-accordion">
+                          <div class="accordion-body">
+                            <ul class="foot-menu">
+                              <li><a href="#">About us</a></li>
+                              <li><a href="#">Blog</a></li>
+                              <li><a href="#">Press</a></li>
+                              <li><a href="#">My account</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-3">
+                      <div class="accordion-item">
+                        <button class="foot-accordion-opener accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">LEGAL</button>
+                        <div class="accordion-collapse collapse" id="collapseThree" data-bs-parent="#foot-accordion">
+                          <div class="accordion-body">
+                            <ul class="foot-menu">
+                              <li><a href="#">Terms &amp; Conditions</a></li>
+                              <li><a href="#">Privacy Policy</a></li>
+                              <li><a href="#">Cookies</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="foot-payment-block d-none d-lg-block"><strong class="foot-title">secure payment</strong>
+                          <ul class="payment-list">
+                            <li><img src="images/logo-payment-01.png" alt="image description"></li>
+                            <li><img src="images/logo-payment-02.png" alt="image description"></li>
+                            <li><img src="images/logo-payment-03.png" alt="image description"></li>
+                            <li><img src="images/logo-payment-04.png" alt="image description"></li>
+                            <li><img src="images/logo-payment-05.png" alt="image description"></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-3">
+                      <div class="accordion-item">
+                        <button class="foot-accordion-opener accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">Contact us</button>
+                        <div class="accordion-collapse collapse" id="collapseFour" data-bs-parent="#foot-accordion">
+                          <div class="accordion-body">
+                            <dl class="foot-contact-block">
+                              <dt>Email: </dt>
+                              <dd>
+                                 <a href="mailto:&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#064;&#110;&#101;&#119;&#105;&#116;&#116;&#115;&#046;&#099;&#111;&#109;">&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#064;&#110;&#101;&#119;&#105;&#116;&#116;&#115;&#046;&#099;&#111;&#109;</a></dd>
+                              <dt>Tel. </dt>
+                              <dd><a href="tel:+4401904468551">+44 (0)1904 468551</a></dd>
+                            </dl>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="foot-social-block"><strong class="foot-title">Follow us</strong>
+                        <ul class="social-list">
+                          <li><a href="#"><svg width="29" height="28" viewBox="0 0 29 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M14.5 16.45C13.1875 16.45 12.05 15.4 12.05 14C12.05 12.6875 13.1 11.55 14.5 11.55C15.8125 11.55 16.95 12.6 16.95 14C16.95 15.3125 15.8125 16.45 14.5 16.45Z" fill="currentColor"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M17.475 8.05H11.525C10.825 8.1375 10.475 8.225 10.2125 8.3125C9.8625 8.4 9.6 8.575 9.3375 8.8375C9.12979 9.04521 9.03165 9.25292 8.91303 9.50399C8.88176 9.57016 8.84899 9.63952 8.8125 9.7125C8.79896 9.75311 8.78333 9.79581 8.76658 9.84158C8.67504 10.0917 8.55 10.4333 8.55 11.025V16.975C8.6375 17.675 8.725 18.025 8.8125 18.2875C8.9 18.6375 9.075 18.9 9.3375 19.1625C9.54521 19.3702 9.75293 19.4684 10.004 19.587C10.0702 19.6183 10.1395 19.651 10.2125 19.6875C10.2531 19.701 10.2958 19.7167 10.3416 19.7334C10.5917 19.825 10.9333 19.95 11.525 19.95H17.475C18.175 19.8625 18.525 19.775 18.7875 19.6875C19.1375 19.6 19.4 19.425 19.6625 19.1625C19.8702 18.9548 19.9684 18.7471 20.087 18.496C20.1183 18.4298 20.151 18.3605 20.1875 18.2875C20.201 18.2469 20.2167 18.2042 20.2334 18.1584C20.325 17.9083 20.45 17.5667 20.45 16.975V11.025C20.3625 10.325 20.275 9.975 20.1875 9.7125C20.1 9.3625 19.925 9.1 19.6625 8.8375C19.4548 8.62978 19.2471 8.53164 18.996 8.41302C18.9299 8.38178 18.8604 8.34896 18.7875 8.3125C18.7469 8.29896 18.7042 8.28333 18.6584 8.26658C18.4083 8.17504 18.0667 8.05 17.475 8.05ZM14.5 10.2375C12.4 10.2375 10.7375 11.9 10.7375 14C10.7375 16.1 12.4 17.7625 14.5 17.7625C16.6 17.7625 18.2625 16.1 18.2625 14C18.2625 11.9 16.6 10.2375 14.5 10.2375ZM19.225 10.15C19.225 10.6332 18.8332 11.025 18.35 11.025C17.8668 11.025 17.475 10.6332 17.475 10.15C17.475 9.66675 17.8668 9.275 18.35 9.275C18.8332 9.275 19.225 9.66675 19.225 10.15Z" fill="currentColor"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0.5 14C0.5 6.26801 6.76801 0 14.5 0C22.232 0 28.5 6.26801 28.5 14C28.5 21.732 22.232 28 14.5 28C6.76801 28 0.5 21.732 0.5 14ZM11.525 6.7375H17.475C18.2625 6.825 18.7875 6.9125 19.225 7.0875C19.75 7.35 20.1 7.525 20.5375 7.9625C20.975 8.4 21.2375 8.8375 21.4125 9.275C21.5875 9.7125 21.7625 10.2375 21.7625 11.025V16.975C21.675 17.7625 21.5875 18.2875 21.4125 18.725C21.15 19.25 20.975 19.6 20.5375 20.0375C20.1 20.475 19.6625 20.7375 19.225 20.9125C18.7875 21.0875 18.2625 21.2625 17.475 21.2625H11.525C10.7375 21.175 10.2125 21.0875 9.775 20.9125C9.25 20.65 8.9 20.475 8.4625 20.0375C8.025 19.6 7.7625 19.1625 7.5875 18.725C7.4125 18.2875 7.2375 17.7625 7.2375 16.975V11.025C7.325 10.2375 7.4125 9.7125 7.5875 9.275C7.85 8.75 8.025 8.4 8.4625 7.9625C8.9 7.525 9.3375 7.2625 9.775 7.0875C10.2125 6.9125 10.7375 6.7375 11.525 6.7375Z" fill="currentColor"/>
+</svg></a></li>
+                          <li><a href="#"><svg width="29" height="28" viewBox="0 0 29 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0.5 14C0.5 6.26801 6.76801 0 14.5 0C22.232 0 28.5 6.26801 28.5 14C28.5 21.732 22.232 28 14.5 28C6.76801 28 0.5 21.732 0.5 14ZM14.5 7C18.35 7 21.5 10.15 21.5 14C21.5 17.5 18.9625 20.475 15.4625 21V16.0125H17.125L17.475 14H15.55V12.6875C15.55 12.1625 15.8125 11.6375 16.6875 11.6375H17.5625V9.8875C17.5625 9.8875 16.775 9.7125 15.9875 9.7125C14.4125 9.7125 13.3625 10.675 13.3625 12.425V14H11.6125V16.0125H13.3625V20.9125C10.0375 20.3875 7.5 17.5 7.5 14C7.5 10.15 10.65 7 14.5 7Z" fill="currentColor"/>
+</svg></a></li>
+                          <li><a href="#"><svg width="29" height="28" viewBox="0 0 29 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M16.775 14L13.1 11.9V16.1L16.775 14Z" fill="currentColor"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0.5 14C0.5 6.26801 6.76801 0 14.5 0C22.232 0 28.5 6.26801 28.5 14C28.5 21.732 22.232 28 14.5 28C6.76801 28 0.5 21.732 0.5 14ZM19.925 9.3625C20.5375 9.5375 20.975 9.975 21.15 10.5875C21.5 11.725 21.5 14 21.5 14C21.5 14 21.5 16.275 21.2375 17.4125C21.0625 18.025 20.625 18.4625 20.0125 18.6375C18.875 18.9 14.5 18.9 14.5 18.9C14.5 18.9 10.0375 18.9 8.9875 18.6375C8.375 18.4625 7.9375 18.025 7.7625 17.4125C7.5 16.275 7.5 14 7.5 14C7.5 14 7.5 11.725 7.675 10.5875C7.85 9.975 8.28751 9.5375 8.90001 9.3625C10.0375 9.1 14.4125 9.1 14.4125 9.1C14.4125 9.1 18.875 9.1 19.925 9.3625Z" fill="currentColor"/>
+</svg></a></li>
+                          <li><a href="#"><svg width="29" height="28" viewBox="0 0 29 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0.5 14C0.5 6.26801 6.76801 0 14.5 0C22.232 0 28.5 6.26801 28.5 14C28.5 21.732 22.232 28 14.5 28C6.76801 28 0.5 21.732 0.5 14ZM19.8375 10.0625C20.45 9.975 20.975 9.8875 21.5 9.625C21.15 10.2375 20.625 10.7625 20.0125 11.1125C20.1875 15.225 17.2125 19.6875 11.875 19.6875C10.3 19.6875 8.8125 19.1625 7.5 18.375C8.9875 18.55 10.5625 18.1125 11.6125 17.325C10.3 17.325 9.25 16.45 8.9 15.3125C9.3375 15.4 9.775 15.3125 10.2125 15.225C8.9 14.875 7.9375 13.65 7.9375 12.3375C8.375 12.5125 8.8125 12.6875 9.25 12.6875C8.025 11.8125 7.5875 10.15 8.375 8.8375C9.8625 10.5875 11.9625 11.725 14.325 11.8125C13.8875 10.0625 15.2875 8.3125 17.125 8.3125C17.9125 8.3125 18.7 8.6625 19.225 9.1875C19.925 9.0125 20.5375 8.8375 21.0625 8.4875C20.8875 9.1875 20.45 9.7125 19.8375 10.0625Z" fill="currentColor"/>
+</svg></a></li>
+                        </ul>
+                      </div>
+                      <div class="foot-sub-logo"><a href="#"><img src="images/logo-comodo.png" alt="image description"></a></div>
+                      <div class="d-lg-none">
+                        <ul class="payment-list">
+                          <li><img src="images/logo-payment-01.png" alt="image description"></li>
+                          <li><img src="images/logo-payment-02.png" alt="image description"></li>
+                          <li><img src="images/logo-payment-03.png" alt="image description"></li>
+                          <li><img src="images/logo-payment-04.png" alt="image description"></li>
+                          <li><img src="images/logo-payment-05.png" alt="image description"></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </aside>
+        <footer class="footer-bottom"><span class="copy d-block text-center">&copy; Copyright 1998-2022 <a href="#">Newitt &amp; Co</a>. Ltd. All Rights Reserved.</span></footer>
+      </div>
+    </div>
+  </body>
+</html>
