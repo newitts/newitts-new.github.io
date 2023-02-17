@@ -1,0 +1,17 @@
+//- -var bodyClass = ''
+-var wrapClass = 'bg-light'
+-var badgeNavActive = true
+-var navbarShort = true
+
+include ./pug/common/_head
+	block content
+		include ./pug/common/_header
+
+		main#main
+			-var itemsBreadcrumbs = ['Home']
+			-var itemLastBreadcrumbs = 'Basket'
+			include ./pug/templates/_breadcrumbs
+
+			include ./pug/sections/_cart_checkout
+
+		include ./pug/common/_footer

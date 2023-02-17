@@ -1,0 +1,45 @@
+//- +cardBlog({
+    addClassCard: 'card-fullwidth-m card-noshadow-mobile border-0 mb-53 mb-md-35',
+    addImgClass: 'rounded-2',
+    imgName: 'img-blog-0',
+    imgExt: 'jpg',
+    imgAlt: '',
+    imgWidth: '724',
+    imgHeight: '483',
+    blogTitle: '',
+    blogBy: '',
+    textDate: 'May 29, 2022',
+    dateFormat: '2022-05-29',
+    blogCategory: '',
+    blogText: ['', ''],
+    linkText: 'Read more'
+//- })
+mixin cardBlog(obj)
+    .card-blog.card(class=''+ obj.addClassCard)
+        .card-body.clearfix
+            if obj.imgName
+                .img-holder.rounded-2.float-sm-end.ms-sm-5.ms-md-7.mt-2.mb-5.my-sm-15.my-md-2.my-lg-3.my-xl-4
+                    a(href="#")
+                        +retinaJpg2x(obj)
+            .card-body-holder.overflow-hidden.pt-md-35
+                .title-block
+                    if obj.blogTitle
+                        h3.card-title.mb-3
+                            a(href="#")!= obj.blogTitle
+                    if obj.blogBy
+                        span.by.fw-medium
+                            | by&nbsp;
+                            a(href="#")!= obj.blogBy
+                    .blog-meta-info.small.text-dark.fw-medium.opacity-60
+                        if obj.textDate != ''
+                            time(datetime=""+ obj.dateFormat)= obj.textDate
+                            | &nbsp;in&nbsp;
+                            if obj.blogCategory
+                                span.category
+                                    a(href="#")!= obj.blogCategory
+                each item in obj.blogText
+                    p!= item
+                p.mb-2: a.btn.btn-link.px-0(href="#")!= obj.linkText
+                    svg.icon.icon-chevron-right
+                        use(xlink:href='#icon-chevron-right')
+                    span.name  icon-chevron-right

@@ -1,0 +1,45 @@
+.brands-list,
+.categories-list {
+  @extend %listreset;
+  display: flex;
+  flex-wrap: wrap;
+
+  .badge {
+    @include animate (background-color color);
+    background-color: $gray-400;
+    color: $black;
+    font-size: inherit;
+    line-height: inherit;
+    text-decoration: none;
+
+    &:hover,
+    &.active {
+      background-color: $warning;
+    }
+  }
+}
+
+.brands-list {
+  font-size: rem-calc(16);
+  line-height: calc(18 / 16);
+  margin: rem-calc(-9 -10);
+
+  li {
+    padding: rem-calc(9 10);
+  }
+
+  @include media-breakpoint-up(xl) {
+    font-size: rem-calc(18);
+    line-height: calc(20 / 18);
+  }
+}
+
+.categories-list {
+  font-size: rem-calc(14);
+  line-height: calc(16 / 14);
+  margin: rem-calc(-5 -8);
+
+  li {
+    padding: rem-calc(5 8);
+  }
+}

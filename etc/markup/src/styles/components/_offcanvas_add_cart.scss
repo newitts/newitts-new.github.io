@@ -1,0 +1,94 @@
+.offcanvas-add-cart {
+    &.offcanvas {
+        max-width: 390px;
+        width: 100vw;
+
+        @include media-breakpoint-up(lg) {
+            max-width: 401px;
+        }
+    }
+
+    .offcanvas-header,
+    .offcanvas-body {
+        @include media-breakpoint-up(xl) {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+    }
+
+    .offcanvas-header {
+        padding-top: rem-calc(28);
+        padding-bottom: rem-calc(23);
+
+        @include media-breakpoint-up(md) {
+            padding-top: rem-calc(23);
+        }
+
+        .btn-close {
+            position: relative;
+            top: -6px;
+            left: -6px;
+
+            @include media-breakpoint-up(md) {
+                top: -2px;
+                left: -8px;
+            }
+        }
+    }
+
+    .offcanvas-body {
+        padding-top: rem-calc(30);
+
+        @include media-breakpoint-up(xl) {
+            padding-top: rem-calc(42);
+        }
+    }
+
+    .card-title {
+        .icon {
+            font-size: rem-calc(24);
+            margin: 0 5px 2px 0;
+        }
+    }
+
+    .img-product {
+        @include size(91px);
+    }
+
+    .buttons-container {
+        @include media-breakpoint-up(lg) {
+            padding-left: 12px;
+            padding-right: 12px;
+        }
+    }
+}
+
+.cart-ifno {
+    .img-holder {
+        border: 1px solid $border-color;
+        border-radius: $border-radius;
+        padding: 100% 0 0;
+        position: relative;
+    }
+
+    .title-product {
+        font-size: rem-calc(18);
+    }
+}
+
+.sum-total {
+    display: flex;
+
+    dd {
+        margin-bottom: 0;
+    }
+
+    .sum-text {
+        color: $gray-alt;
+        margin: 0 8px 0 0;
+    }
+
+    .price {
+        font-size: rem-calc(18);
+    }
+}

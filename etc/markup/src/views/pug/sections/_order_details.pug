@@ -1,0 +1,59 @@
+section.section-order.section.py-3
+    .container-xxl
+        .pb-3.pb-md-0
+            h2.title-section.fw-bold.mb-35.mb-lg-37 Order 129823-1349349
+        .twocolumns-sidebar-right.row.gx-35
+            #content.col-lg-8
+                .row.row-cols-1.row-cols-lg-2.g-lg-35
+                    .col.mb-3.mb-md-35
+                        .card-fullwidth-m.card.card-noshadow-mobile.border-0.fw-medium.h-100
+                            .card-header.border-bottom-0.pt-33.pb-0
+                                .border-bottom
+                                    .row-title.pb-2
+                                        h5.card-title.h5 Order Status
+                            .card-body
+                                .row.gx-35.pt-12
+                                    .col-auto
+                                        .ico-box.bg-success-200.text-success.rounded-1.h-100.p-12
+                                            <svg class="icon icon-circle-success"><use xlink:href="#icon-circle-success"></use></svg><span class="name"> icon-circle-success</span>
+                                    .col
+                                        .small
+                                            h6.card-title.mb-1 Available to collect from Warehouse
+                                            address.small.text-dark.opacity-60.mb-1 Newitts.com, York, YO60 7RE, GB.
+                                            p.small.text-dark.opacity-60.mb-1 8:00am to 4:00pm, Monday to Friday
+                    .col.mb-3.mb-md-35
+                        .card-fullwidth-m.card.card-noshadow-mobile.border-0.fw-medium.h-100
+                            .card-header.border-bottom-0.pt-33.pb-0
+                                .border-bottom
+                                    .row-title.pb-2
+                                        h5.card-title.h5 Delivery Address
+                            .card-body
+                                .pt-1
+                                    address.small.text-dark.opacity-50 Phillips Gaillard, #[br] Gunnersbury House, 1 Chapel Hill, #[br] London, Greater London, A11 B12, #[br] United Kingdom
+
+                include ../components/_card_order_items
+
+            .sidebar.col-lg-4
+                include ../components/_card_order_summary
+
+                .vstack.gap-33.mb-4
+                    .vstack-row
+                        a.btn-checkout.btn.btn-lg.btn-warning.text-white.text-start.d-block(href="#")
+                            .row.align-items-center.gx-2
+                                .col.pe-0
+                                    strong.btn-title.h6.fw-bold.text-white.text-uppercase View orders
+                                .col-auto
+                                    span.ico-circle
+                                        svg.icon.icon-chevron-right
+                                            use(xlink:href='#icon-chevron-right')
+                                        span.name  icon-chevron-right
+                    .vstack-row
+                        a.btn-checkout.btn.btn-lg.btn-light-450.text-dark.text-start.d-block(href="#")
+                            .row.align-items-center.gx-2
+                                .col.pe-0
+                                    strong.btn-title.h6.fw-bold.text-dark.text-uppercase Return items
+                                .col-auto
+                                    span.ico-circle
+                                        svg.icon.icon-chevron-right
+                                            use(xlink:href='#icon-chevron-right')
+                                        span.name  icon-chevron-right

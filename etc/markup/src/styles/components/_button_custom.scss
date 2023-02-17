@@ -1,0 +1,410 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button component.
+// -----------------------------------------------------------------------------
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: .025em;
+    padding-top: calc($btn-padding-y - 4px);
+    padding-bottom: calc($btn-padding-y - 4px);
+
+    @include media-breakpoint-up(lg) {
+        padding-top: calc($btn-padding-y - 2px);
+        padding-bottom: calc($btn-padding-y - 2px);
+    }
+
+    @include media-breakpoint-up(xl) {
+        padding-top: calc($btn-padding-y - 1px);
+        padding-bottom: calc($btn-padding-y - 1px);
+    }
+
+    .offcanvas-add-cart & {
+        font-weight: $font-weight-medium;
+
+        &:focus,
+        &:hover {
+            font-weight: 600;
+        }
+    }
+
+    .card-fly & {
+        &:focus,
+        &:hover {
+            font-weight: 700;
+        }
+    }
+
+    &.height-auto {
+        height: auto !important;
+    }
+
+    &.btn-sm {
+        padding-top: calc($input-btn-padding-y-sm + 1px);
+        padding-bottom: calc($input-btn-padding-y-sm - 1px);
+
+        .icon {
+            font-size: 100%;
+            margin-left: 5px;
+        }
+    }
+
+    &.btn-lg {
+        line-height: calc(23.75 / 18);
+        padding-top: calc($input-btn-padding-y-lg);
+        padding-bottom: calc($input-btn-padding-y-lg - 1px);
+
+        .icon {
+            font-size: 100%;
+            margin-left: 5px;
+        }
+
+        .ico-circle {
+            .icon {
+                font-size: 120%;
+            }
+        }
+
+        .icon-creditcard {
+            font-size: rem-calc(28);
+        }
+    }
+
+    &.btn-filter {
+        font-size: rem-calc(14);
+        padding: 3px 14px !important;
+    }
+
+    &.btn-delete {
+        .icon {
+            font-size: rem-calc(14);
+            margin: 0 1px 0 0 !important;
+        }
+    }
+
+    &.btn-link {
+        font-weight: $font-weight-medium;
+        letter-spacing: 0;
+        padding: 4px;
+    }
+
+    &.is-sticky {
+        background-color: $black;
+        border-radius: 0 !important;
+        font-size: rem-calc(20);
+        font-weight: $font-weight-medium;
+
+        &:focus,
+        &:hover {
+            background-color: var(--#{$prefix}btn-hover-bg);
+        }
+    }
+
+    .visually-hidden {
+        + .icon {
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
+
+    .icon {
+        @include animate(opacity);
+        font-size: 120%;
+        margin: -1px -3px 1px 20px;
+
+        @include media-breakpoint-up(lg) {
+            font-size: 110%;
+            margin-left: 11px;
+            margin-right: 0;
+        }
+
+        &:first-child {
+            margin: 0 12px 0 0;
+        }
+
+        &:only-child {
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
+
+    .icon-delivery {
+        font-size: rem-calc(24);
+    }
+}
+
+.btn-link {
+    &.btn {
+        .ico-circle,
+        .icon {
+            @include animate(margin);
+            margin-right: 0;
+            margin-left: 5px;
+        }
+
+        &:focus,
+        &:hover {
+            .ico-circle,
+            .icon {
+                margin-left: 8px;
+            }
+        }
+    }
+
+    + .btn-link {
+        margin-left: 15px;
+    }
+
+    .ico-circle {
+        background-color: transparent;
+        box-shadow: none;
+    }
+}
+
+.btn-custom {
+    padding: rem-calc(6 20 5);
+    font-size: .875rem;
+    letter-spacing: 0;
+}
+
+.btn-sm {
+    font-size: rem-calc(12);
+    font-weight: $font-weight-bold;
+    letter-spacing: .06em;
+
+    .offcanvas-footer & {
+        border-radius: $border-radius-lg;
+        letter-spacing: $letter-spacing-alt;
+        padding: 8px 20px;
+    }
+}
+
+.btn-light {
+    background-color: $white;
+    color: $dark;
+
+    &:focus,
+    &:hover {
+        background-color: $btn-hover-bg-color;
+        border-color: $btn-hover-bg-color;
+        color: $white;
+    }
+}
+
+.btn-dark {
+    .text-light-500 {
+        color: rgba(#fff, .6) !important;
+    }
+}
+
+.btn-outline-dark {
+    &:focus,
+    &:hover {
+        background-color: $btn-hover-bg-color;
+        border-color: $btn-hover-bg-color;
+        // color: $white;
+        color: $dark;
+        box-shadow: none;
+
+        .number-info {
+            color: inherit !important;
+        }
+    }
+}
+
+.btn-outline-secondary {
+    border-color: #E6E6E6;
+    color: rgba($dark, .5);
+}
+
+.btn-close {
+    @include hide-text;
+    background-image: none;
+    padding: 0 !important;
+    position: relative;
+
+    &:before {
+        @include icon-icomoon("\e918", 20px);
+        @include center-vh;
+    }
+}
+
+.btn-filter {
+    border-color: $border-color;
+}
+
+.btn-clear {
+    @include link-color($gray-base, $warning);
+    font-size: rem-calc(12);
+    font-weight: $font-weight-semibold;
+    height: auto !important;
+    letter-spacing: $letter-spacing-base;
+    text-decoration: none;
+}
+
+.btn-delete {
+    @include size(24px);
+    border-radius: $border-radius-sm;
+    font-size: rem-calc(14);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px;
+}
+
+.btn-show-more {
+    @include link-color($body-color-alt, $warning);
+    font-size: rem-calc(12);
+    font-weight: $font-weight-bold;
+    letter-spacing: .06em;
+    display: inline-flex;
+    align-items: center;
+    text-transform: uppercase;
+
+    &[aria-expanded="true"] {
+        .visible-active {
+            opacity: 1;
+            visibility: visible;
+            position: relative;
+        }
+
+        .hidden-active {
+            opacity: 0;
+            visibility: hidden;
+            position: absolute;
+        }
+    }
+
+    [class^="icon-"],
+    [class*=" icon-"],
+    [class^="ico-"],
+    [class*=" ico-"] {
+        &:first-child {
+            margin: 0 5px 0 0;
+        }
+
+        &:last-child {
+            margin: 0 0 0 5px;
+        }
+    }
+
+    .hidden-active,
+    .visible-active {
+        @include animate(opacity visibility);
+    }
+
+    .visible-active {
+        position: absolute;
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+.btn-reload {
+    .icon {
+        font-size: 14px;
+    }
+}
+
+.btn-checkout {
+	padding: 14px 16px;
+	font-size: rem-calc(13);
+    font-weight: $font-weight-medium;
+	line-height: calc(16 / 13);
+	letter-spacing: 0;
+
+    &.btn-lg {
+        .btn-title {
+            letter-spacing: $letter-spacing-base;
+        }
+
+        @include media-breakpoint-up(xl) {
+            padding: rem-calc(14 19 14 23);
+        }
+    }
+
+    small,
+    .small {
+        font-size: 100%;
+    }
+
+	.btn-title {
+		display: block;
+		margin: -1px 0 1px;
+		line-height: calc(17.5 / 16);
+        letter-spacing: 0;
+
+		@include media-breakpoint-down(md) {
+			font-size: rem-calc(17);
+		}
+	}
+
+	.icon-box {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 37px;
+		height: 40px;
+		background: rgba($white, .25);
+		border-radius: $border-radius-sm;
+
+		img {
+			max-height: 24px;
+		}
+	}
+
+	&.btn-dark {
+		.btn-title.h6 {
+			color: #fff;
+		}
+	}
+
+    .ico-circle {
+        margin: -1px -1px 0 0;
+
+        .icon {
+            margin: 0 !important;
+        }
+    }
+}
+
+.faq-opener {
+    padding-right: 40px !important;
+
+    &:after {
+        width: 30px;
+    }
+}
+
+.btn-add {
+    min-height: 60px;
+    padding-top: rem-calc(16);
+    padding-bottom: rem-calc(16);
+
+    @include media-breakpoint-up(md) {
+        min-height: 70px;
+        min-width: 180px;
+    }
+
+    @include media-breakpoint-up(lg) {
+        min-height: 80px;
+        min-width: 200px;
+    }
+
+    @include media-breakpoint-up(xl) {
+        min-height: 94px;
+        min-width: 233px;
+    }
+}
+
+.link-edit {
+    @include link-color-underline($warning, $body-color);
+}
+
+.link-delete {
+    @include link-color-underline($light-500, $body-color);
+}
+
+.pagination {
+    font-weight: $pagination-font-weight;
+}

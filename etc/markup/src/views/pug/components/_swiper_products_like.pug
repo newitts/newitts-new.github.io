@@ -1,0 +1,36 @@
+//- Slider main container
+.swiper.swiper-products.mb-3.mb-xl-35
+	//- Additional required wrapper
+	.swiper-wrapper
+		//- Slides
+		-for (var i = 0; i <4; i++)
+			.swiper-slide
+				+cardProduct({
+					addClassCard: 'shadow-none',
+					addImgClass: '',
+					imgName: 'img-card_product-02',
+					imgWidth: '275',
+					imgHeight: '275',
+					favorite: true,
+					addClassFavorite: 'favorite-link',
+					iconFavoriteName: 'heart',
+					iconFavoriteID: 'last03',
+					addBadgeClass: '',
+					badge: '',
+					title: 'Gray Nicolls Test Originals',
+					price: '£24.00',
+					oldPrice: '',
+					qtyReviews: '(15)',
+					rating: true,
+					addRatingClass: '',
+					currentRating: '4'
+				})
+
+	//- pagination
+	//- .swiper-pagination
+	//- navigation buttons
+	.swiper-button-prev
+	.swiper-button-next
+	//- scrollbar
+	.swiper-scrollbar-container.d-lg-none
+		.swiper-scrollbar

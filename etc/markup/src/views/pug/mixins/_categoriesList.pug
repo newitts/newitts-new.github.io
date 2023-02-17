@@ -1,0 +1,15 @@
+//- +categoriesList([
+  {
+    item: "item"
+  },
+  {
+    item: "item"
+  },
+  {
+    item: "item"
+  }
+//- ])
+mixin categoriesList(obj)
+    ul.categories-list
+        each arr in obj
+            li: a.badge(href="#" class=(arr.active ? 'active' : ''))= arr.item

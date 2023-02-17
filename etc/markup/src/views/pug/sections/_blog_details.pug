@@ -1,0 +1,65 @@
+section.section-blog.section.py-3
+    .container-xxl
+        .row.justify-content-center
+            .col-md-11.col-lg-10.col-xl-9
+                h1.title-section.fw-bold.mb-35.mb-lg-37 Ping Pong
+                p.entry-meta
+                    strong.fw-semibold Posted on 
+                    a.entry-date(href='#') 20/02/2020
+                    span.separator.mx-2 |
+                    strong.fw-semibold By 
+                    a.entry-author(href='#') Rebecca Newitt
+
+                .img-holder.mb-4
+                    +retinaJpg2x({
+                        addImgClass: 'rounded-2',
+                        imgName: 'img-blog-01',
+                        imgWidth: '724',
+                        imgHeight: '483',
+                        alt: ''
+                    })
+                h2.h3 8 reasons to try table tennis or ping pong!
+                p Table tennis/ Ping pong is fun and competitive sport that you can spend your time enjoying as an individual, a pair, as part of team or even at home with your family!
+                p It also offers surprisingly quite a number of health benefits. Physical and mental health is so important and like most sports out there, table tennis is fantastic stimulation for both your body and mind.
+                p Ping pong is also an aerobic exercise, which has a low injury risk and is great socially!
+                p Some of the many health benefits of table tennis include:
+                ol
+                    li 
+                        p #[strong.fw-semibold It improves you reflexes.] Ping Pong is both fast and short distanced, so your gross and fine muscle movements can be worked on and improved.
+                    li
+                        p #[strong.fw-semibold It improves hand-eye coordination.] Ping Pong is a quick and fast game of that stimulates your mental ability and improves your concentration as your hands and eyes work together at the same time. Because table tennis activates various areas of the brain at the same time, you can stimulate awareness.
+                    li
+                        p #[strong.fw-semibold It is a social sport.] Having social interaction is good for your mental health, especially in a world where we are so motivated by technology. A wonderful way to connect would be through a table tennis game where you can turn off your phone and chat and play with your opponent.
+                    li
+                        p #[strong.fw-semibold It builds agility, speed and strength.] Table tennis does all of these things without putting yourself at risk of serious injury. You can reap all the health benefits safely.
+                    li
+                        p #[strong.fw-semibold It improves balance.] Staying balanced and being able to go in the opposite direction is an essential part of being a great table tennis player. The more you practise, the more you can improve your balance.
+                    li
+                        p #[strong.fw-semibold It keeps your brain sharp.] Ping pong is very aerobic, and it uses both your upper and lower body. It is fantastic for eye hand coordination and your reflexes. Ping pong uses many areas of your brain at the same time because you have to watch the ball, make your hits and figure out what to do next.
+                    li
+                        p #[strong.fw-semibold It is gentle on yours joints.] Table tennis is the perfect choice for those who suffer from injury. You do not have to run lap and after lap or be a marathon runner to play a fun game of ping pong.
+                    li
+                        p #[strong.fw-semibold It burns calories.] Do you detest the gym and avoid it at all costs? Why not try table tennis? It is a fun and easy way to burn calories.
+                p: i If you need any Ping Pong equipment please check out our #[a(href="#") full range].
+
+                .py-3
+                    +categoriesList([
+                        {
+                            item: "Category 1"
+                        },
+                        {
+                            item: "Category 2"
+                        },
+                        {
+                            item: "Category 3"
+                        }
+                    ])
+                .py-3
+                    .row.align-items-center.gx-2
+                        .col-auto
+                            strong.h6.d-block.my-1 Share:
+                        .col
+                            include ../components/_social_networks
+
+
+

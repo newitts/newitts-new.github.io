@@ -1,0 +1,15 @@
+section.section.py-3
+    .container-xxl
+        .row.justify-content-center
+            .column-center-main.col-lg-9
+                .twocolumns-sidebar-right.row.gx-35
+                    #content.col-lg-7
+                        include ../components/_card_payment_details
+
+                        include ../components/_card_partners_logo
+
+                    .sidebar.col-lg-5
+                        .sidebar_sticky_order
+                            .sidebar_inner
+                                -var inputPromoBlock = false
+                                include ../components/_card_order

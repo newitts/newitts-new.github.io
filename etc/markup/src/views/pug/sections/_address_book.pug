@@ -1,0 +1,20 @@
+section.section-address-book.py-3
+    .container-xxl
+        h1.fw-bold.mb-35.mb-lg-37 Address Book
+        .row.row-cols-1.row-cols-md-2.row-cols-lg-3.gx-35.gy-4
+            .col
+                -var addressDeliveryChecked = true
+                -var addressInvoiceChecked = true
+                -var addressDeliveryId = '01'
+                -var addressInvoiceId = '01'
+                include ../templates/_card_address
+            .col
+                -var addressDeliveryChecked = false
+                -var addressInvoiceChecked = false
+                -var addressDeliveryId = '02'
+                -var addressInvoiceId = '02'
+                include ../templates/_card_address
+            .col
+                .card.border-0.bg-transparent.shadow-none
+                    .card-body.py-1.px-lg-5
+                        a.btn-add.btn.btn-outline-dark(href="#") Add new address

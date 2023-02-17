@@ -1,0 +1,363 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the common layout of the site
+// -----------------------------------------------------------------------------
+body {
+  min-width: $body-min-width;
+}
+
+// footer at bottom styles start
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+[id="wrapper"] {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 100%;
+}
+
+// footer at bottom styles end
+
+[id="wrapper"] {
+  width: 100%;
+  overflow: hidden;
+  padding: 136px 0 0;
+
+  @include media-breakpoint-up(lg) {
+    padding-top: 118px;
+  }
+}
+
+[id="main"] {
+  padding-bottom: rem-calc(20);
+
+  @include media-breakpoint-up(md) {
+    padding-bottom: rem-calc(30);
+  }
+
+  @include media-breakpoint-up(lg) {
+    padding-bottom: rem-calc(40);
+  }
+
+  @include media-breakpoint-up(xl) {
+    padding-bottom: rem-calc(48);
+  }
+}
+
+[class^="container-"],
+[class*=" container-"],
+[class^="container"],
+[class*=" container"] {
+    @include media-breakpoint-up(xl) {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+  [class^="container-"],
+  [class*=" container-"],
+  [class^="container"],
+  [class*=" container"] {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.column-center-main {
+  @include media-breakpoint-up(xl) {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+.twocolumns {
+  $width-sidebar-md: 280px;
+  $width-sidebar-lg: 327px;
+
+  #sidebar,
+  .sidebar,
+  .aside {
+    @include media-breakpoint-up(md) {
+      flex-basis: $width-sidebar-md;
+      width: $width-sidebar-md;
+    }
+
+    @include media-breakpoint-up(lg) {
+      flex-basis: $width-sidebar-lg;
+      width: $width-sidebar-lg;
+    }
+  }
+
+  #content {
+    flex-shrink: 1;
+
+    @include media-breakpoint-up(md) {
+      flex-basis: calc(100% - #{$width-sidebar-md});
+      width: calc(100% - #{$width-sidebar-md});
+    }
+
+    @include media-breakpoint-up(lg) {
+      flex-basis: calc(100% - #{$width-sidebar-lg});
+      width: calc(100% - #{$width-sidebar-lg});
+    }
+  }
+}
+
+.twocolumns-sidebar-left,
+.twocolumns-sidebar-right {
+  // $width-sidebar-md: 280px;
+  $width-sidebar-lg: 320px;
+  $width-sidebar-xl: 420px;
+
+  #sidebar,
+  .sidebar,
+  .aside {
+    @include media-breakpoint-between(lg, xl) {
+      flex-basis: $width-sidebar-lg;
+      width: $width-sidebar-lg;
+    }
+
+    @include media-breakpoint-up(xl) {
+      flex-basis: $width-sidebar-xl;
+      width: $width-sidebar-xl;
+    }
+  }
+
+  #content,
+  .content {
+    flex-shrink: 1;
+
+    @include media-breakpoint-between(lg, xl) {
+      flex-basis: calc(100% - #{$width-sidebar-lg});
+      width: calc(100% - #{$width-sidebar-lg});
+    }
+
+    @include media-breakpoint-up(xl) {
+      flex-basis: calc(100% - #{$width-sidebar-xl});
+      width: calc(100% - #{$width-sidebar-xl});
+    }
+  }
+}
+
+.img-product {
+  @include animate(border);
+  min-width: 92px;
+  padding: 99% 0 0;
+  position: relative;
+  border: 1px solid $border-color;
+  border-radius: $border-radius;
+  overflow: hidden;
+
+  .swiper-thumbs & {
+    border-radius: $border-radius-sm;
+  }
+
+  img {
+      @include center-vh;
+      border-radius: inherit;
+      object-fit: contain;
+      object-position: center;
+      width: auto;
+      height: auto;
+      max-height: 100%;
+  }
+}
+
+.icon {
+  + .name {
+    @extend .visually-hidden;
+  }
+}
+
+.section-filters {
+  .title-section {
+    @include media-breakpoint-up(lg) {
+      margin-bottom: calc(19 / 28 * 1em);
+    }
+  }
+}
+
+.number-info {
+  @include align(middle);
+  font-size: rem-calc(16);
+  font-weight: $font-weight-medium;
+  margin: 0 0 0 2px;
+
+  &.text-gray-500 {
+    color: $gray-base !important;
+  }
+
+  .card-title & {
+    margin-top: -1px;
+    margin-bottom: 1px;
+  }
+
+  .form-check & {
+    font-size: rem-calc(15);
+  }
+
+  .btn & {
+    font-size: rem-calc(12);
+    margin-left: 4px;
+  }
+}
+
+.section-filters-result {
+  .card-filters,
+  .card-category {
+    .card-title {
+      @include media-breakpoint-down(lg) {
+        font-size: rem-calc(16);
+      }
+    }
+  }
+}
+
+.promo-block {
+  .form-control {
+    @include media-breakpoint-up(xl) {
+      height: auto;
+      padding: rem-calc(12 12 11);
+    }
+  }
+
+  .btn {
+    @include media-breakpoint-up(xl) {
+      height: auto;
+    }
+  }
+}
+
+.widget-checkout {
+  padding-top: 2px;
+
+  .widget-title {
+    font-size: rem-calc(22);
+
+    @include media-breakpoint-up(md) {
+      font-size: rem-calc(20);
+      margin-bottom: rem-calc(13);
+    }
+  }
+
+  small,
+  .small {
+    font-weight: $font-weight-medium;
+    line-height: calc(16 / 14);
+    margin: 6px 0 0;
+
+    @include media-breakpoint-up(lg) {
+      font-size: rem-calc(12);
+    }
+  }
+}
+
+.select-open-close {
+  .select-slide {
+    @include animate(height max-height opacity transform visibility);
+    overflow: hidden;
+    padding-right: 1px;
+  }
+
+  .select-slide-active {
+    .select-slide_holder {
+      margin-top: 0;
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  .select-slide_holder {
+    @include animate(height margin opacity transform visibility, .4s);
+    margin: -100% 0 0;
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.check-open-close {
+  .check-slide {
+    @include animate(height max-height opacity transform visibility, .4s);
+    overflow: hidden;
+  }
+
+  .check-slide-active {
+    .check-slide_holder {
+      margin-top: 0;
+      margin-bottom: 9px;
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  .check-slide_holder {
+    @include animate(height margin opacity transform visibility);
+    margin: -100% 0;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .check-slide {
+    padding: 3px;
+    margin: -3px;
+  }
+}
+
+.section-faq {
+  .tab-pane {
+    .card-header,
+    .card-body,
+    .card-footer {
+      @include media-breakpoint-up(xl) {
+        padding-left: 30px;
+        padding-right: 30px;
+      }
+    }
+
+    .card-body {
+      @include media-breakpoint-up(xl) {
+        padding-top: rem-calc(24);
+        padding-bottom: rem-calc(36);
+      }
+    }
+  }
+}
+
+.section-account {
+  #sidebar,
+  .sidebar,
+  .aside {
+    .btn-lg {
+      letter-spacing: 0;
+
+      @include media-breakpoint-up(xl) {
+        padding-top: rem-calc(18);
+        padding-bottom: rem-calc(17);
+      }
+    }
+  }
+}
+
+.list-contact {
+  dt {
+    margin: 0 4px 0 0;
+  }
+
+  dd {
+    margin-bottom: 0;
+  }
+}
+
+.section-order {
+  .title-section {
+    @include media-breakpoint-up(xl) {
+      font-size: rem-calc(36);
+    }
+  }
+}
+
+.section-return {
+  
+}

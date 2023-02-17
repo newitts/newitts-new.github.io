@@ -1,0 +1,62 @@
+.ico-plus {
+  @include align(middle);
+  @include hide-text;
+  @include size(10px);
+  position: relative;
+
+  &:before,
+  &:after {
+    @include animate(background-color border transform);
+    content: "";
+    background: $body-color-alt;
+    border-radius: 2px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+  }
+
+  &:before {
+    width: 90%;
+    height: 1px;
+  }
+
+  &:after {
+    width: 1px;
+    height: 90%;
+  }
+
+  [aria-expanded="true"] & {
+    &:after {
+      transform: translate(-50%, -50%) rotate(90deg);
+    }
+  }
+}
+
+.ico-circle {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 34px;
+	height: 34px;
+	border-radius: 50%;
+	background-color: $white;
+	box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.07);
+
+  .icon {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+	.icon-chevron-right {
+		font-size: 18px;
+		color: #6A6A6A;
+	}
+}
+
+.ico-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: rem-calc(24);
+}

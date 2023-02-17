@@ -1,0 +1,5 @@
+.list-filters-container
+    .list-filters-wrap
+        ul.list-filters.nav.mb-0
+            each item in ['Football', 'Cricket', 'Rugby', 'Boxing', 'Golf', 'Darts', 'Swimming', 'Tennis']
+                li.nav-item #[a(href='#').nav-link.rounded-pill= item]

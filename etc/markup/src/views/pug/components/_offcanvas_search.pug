@@ -1,0 +1,112 @@
+#offcanvasTopSearch.offcanvas-search.offcanvas_main.offcanvas.offcanvas-top(tabindex='-1' aria-labelledby='offcanvasTopSearch')
+    .offcanvas-header.px-0
+        .container-xxl
+            .row.justify-content-between.align-items-center.flex-grow-1.gx-35
+                .column-left.col-6.col-lg-3.d-none.d-lg-block
+                    .row.align-items-center.gx-0
+                        .col-auto
+                            span.invisible.navbar-toggler
+                                span.navbar-toggler-icon
+                        .col
+                            a.navbar-brand(href='#')
+                                img(src='images/logo.svg', alt='NEWITTS', width='141' height='20')
+                .column-center.col.col-lg-6
+                    .form-container
+                        form.d-flex(role='search')
+                            -var inputGroupMargin = ''
+                            -var placeholderSearchRight = ' '
+                            -var searchHeaderId = '03'
+                            //- include ../templates/_search_icon_left
+                            include ../templates/_search_icon_right
+                .column-right.col-auto.col-lg-3.position-relative
+                    button.btn-close(type='button' data-bs-dismiss='offcanvas' aria-label='Close')
+                        span.visually-hidden Close nav
+                    //- .invisible
+                    //- 	ul.nav-icons.navbar-nav.d-flex.flex-row
+                    //- 		li.nav-item
+                    //- 			a.nav-link(href='#')
+                    //- 				<svg class="icon icon-user"><use xlink:href="#icon-user"></use></svg><span class="name"> icon-user</span>
+                    //- 		li.nav-item
+                    //- 			a.nav-link(href='#')
+                    //- 				<svg class="icon icon-heart"><use xlink:href="#icon-heart"></use></svg><span class="name"> icon-heart</span>
+                    //- 		li.nav-item
+                    //- 			a.nav-link(href='#')
+                    //- 				<svg class="icon icon-basket"><use xlink:href="#icon-basket"></use></svg><span class="name"> icon-basket</span>
+    .offcanvas-body
+        .container-xxl
+            .row.flex-grow-1.gx-5
+                .column-left.col-lg-3
+                    .row.align-items-center.gx-0
+                        .col-auto.d-none.d-lg-block
+                            span.invisible.navbar-toggler
+                                span.navbar-toggler-icon
+                        .col
+                            .search-results
+                                strong.d-block.fw-medium.text-light-600 Categories
+                                hr.border.opacity-50
+                                ul.list-categories.nav.flex-column
+                                    each item in ['Ballet Equipment', 'Ball Pumps', 'Ball Bags']
+                                        li.nav-item #[a(href="#").nav-link= item]
+                .column-center.col-lg-6
+                    .search-cards-container
+                        //- .row.gx-17
+                        .row.row-cols-1.row-cols-sph-2.row-cols-md-3.gx-17.gx-lg-35
+                            .col
+                                +cardProduct({
+                                    addClassCard: 'shadow-none',
+                                    addImgClass: '',
+                                    imgName: 'img-card_product-06',
+                                    imgWidth: '154',
+                                    imgHeight: '154',
+                                    favorite: false,
+                                    addClassFavorite: 'favorite-link',
+                                    addBadgeClass: '',
+                                    badge: '',
+                                    title: 'Gray Nicolls  Originals',
+                                    price: '£24.00',
+                                    oldPrice: '',
+                                    qtyReviews: '',
+                                    rating: false,
+                                    addRatingClass: '',
+                                    currentRating: ''
+                                })
+                            .col
+                                +cardProduct({
+                                    addClassCard: 'shadow-none',
+                                    addImgClass: '',
+                                    imgName: 'img-card_product-05',
+                                    imgWidth: '154',
+                                    imgHeight: '154',
+                                    favorite: false,
+                                    addClassFavorite: 'favorite-link',
+                                    addBadgeClass: '',
+                                    badge: '',
+                                    title: 'Gray Nicolls  Originals',
+                                    price: '£24.00',
+                                    oldPrice: '',
+                                    qtyReviews: '',
+                                    rating: false,
+                                    addRatingClass: '',
+                                    currentRating: ''
+                                })
+                            .col
+                                +cardProduct({
+                                    addClassCard: 'shadow-none',
+                                    addImgClass: '',
+                                    imgName: 'img-card_product-07',
+                                    imgWidth: '154',
+                                    imgHeight: '154',
+                                    favorite: false,
+                                    addClassFavorite: 'favorite-link',
+                                    addBadgeClass: '',
+                                    badge: '',
+                                    title: 'Gray Nicolls  Originals',
+                                    price: '£24.00',
+                                    oldPrice: '',
+                                    qtyReviews: '',
+                                    rating: false,
+                                    addRatingClass: '',
+                                    currentRating: ''
+                                })
+
+                .column-right.col-auto.col-lg-3.d-none.d-lg-block

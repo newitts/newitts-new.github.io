@@ -1,0 +1,84 @@
+#footer
+	aside.footer-top
+		.container-xxl
+			#foot-accordion.footer-bar
+				.row.gx-xl-6
+					.col-lg-5.col-xl-4
+						.foot-logo
+							a(href=""): img(src="images/logo-white.svg", alt="newitts")
+						form.foot-form(action="#") 
+							.form-text Sign up to our newsletter and receive our latest bargains before anyone else.
+							.search-box.input-group
+								input.form-control(type="text" placeholder="Enter your email")
+								button.input-group-text(type="submit")
+									| SUBSCRIBE
+									<svg class="icon icon-arrow-right"><use xlink:href="#icon-arrow-right"></use></svg>
+					.col-xl-8
+						.footer-row.row.gx-2.gx-xll-54
+							.col-lg-3
+								.accordion-item
+									button.foot-accordion-opener.accordion-button.collapsed(type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne") HELP
+									#collapseOne.accordion-collapse.collapse(data-bs-parent="#foot-accordion")
+										.accordion-body
+											ul.foot-menu
+												li: a(href="#") Contact us
+												li: a(href="#") FAQ's
+												li: a(href="#") Orders &amp; payments
+												li: a(href="#") Delivery costs
+												li: a(href="#") Returns policy
+												li: a(href="#") Site Map
+							.col-lg-3
+								.accordion-item
+									button.foot-accordion-opener.accordion-button.collapsed(type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo") NEWITTS
+									#collapseTwo.accordion-collapse.collapse(data-bs-parent="#foot-accordion")
+										.accordion-body
+											ul.foot-menu
+												li: a(href="#") About us
+												li: a(href="#") Blog
+												li: a(href="#") Press
+												li: a(href="#") My account
+							.col-lg-3
+								.accordion-item
+									button.foot-accordion-opener.accordion-button.collapsed(type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree") LEGAL
+									#collapseThree.accordion-collapse.collapse(data-bs-parent="#foot-accordion")
+										.accordion-body
+											ul.foot-menu
+												li: a(href="#") Terms &amp; Conditions
+												li: a(href="#") Privacy Policy
+												li: a(href="#") Cookies
+									.foot-payment-block.d-none.d-lg-block
+										strong.foot-title secure payment
+										ul.payment-list
+											li: img(src="images/logo-payment-01.png", alt="image description")
+											li: img(src="images/logo-payment-02.png", alt="image description")
+											li: img(src="images/logo-payment-03.png", alt="image description")
+											li: img(src="images/logo-payment-04.png", alt="image description")
+											li: img(src="images/logo-payment-05.png", alt="image description")
+							.col-lg-3
+								.accordion-item
+									button.foot-accordion-opener.accordion-button.collapsed(type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour") Contact us
+									#collapseFour.accordion-collapse.collapse(data-bs-parent="#foot-accordion")
+										.accordion-body
+											dl.foot-contact-block
+												dt Email: 
+												dd 
+													<a href="mailto:&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#064;&#110;&#101;&#119;&#105;&#116;&#116;&#115;&#046;&#099;&#111;&#109;">&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#064;&#110;&#101;&#119;&#105;&#116;&#116;&#115;&#046;&#099;&#111;&#109;</a>
+												dt Tel. 
+												dd: a(href="tel:+4401904468551") +44 (0)1904 468551
+								.foot-social-block
+									strong.foot-title Follow us
+									include ../components/_social_networks_footer
+								.foot-sub-logo: a(href="#"): img(src="images/logo-comodo.png", alt="image description")
+								.d-lg-none
+									ul.payment-list
+										li: img(src="images/logo-payment-01.png", alt="image description")
+										li: img(src="images/logo-payment-02.png", alt="image description")
+										li: img(src="images/logo-payment-03.png", alt="image description")
+										li: img(src="images/logo-payment-04.png", alt="image description")
+										li: img(src="images/logo-payment-05.png", alt="image description")
+
+	footer.footer-bottom
+		span.copy.d-block.text-center
+			| &copy; Copyright 1998-2022 
+			a(href="#") Newitt &amp; Co
+			| . Ltd. All Rights Reserved.

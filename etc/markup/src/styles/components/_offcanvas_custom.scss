@@ -1,0 +1,66 @@
+.offcanvas_main {
+    @include scroll-custom;
+    min-width: $body-min-width;
+
+    #sidebar &,
+    .sidebar &,
+    .aside & {
+        min-width: 0;
+    }
+
+    &.offcanvas-add-cart {
+        .btn-close {
+            background-color: $light;
+            border-color: $light;
+            color: $body-color-alt;
+        }
+    }
+}
+
+.offcanvas-header {
+    .btn-close {
+        border: 1px solid $navbar-light-toggler-border-color;
+        border-radius: 50%;
+        opacity: 1;
+        padding: 0;
+    }
+}
+
+.offcanvas-body {
+    &.disable-scroll {
+        overflow: hidden;
+    }
+}
+
+.offcanvas-footer {
+    border-top: 1px solid $border-color;
+    display: flex;
+    align-items: center;
+    min-height: 70px;
+    padding: 10px 16px;
+
+    .row {
+        flex: 1 1 100%;
+    }
+
+    .btn {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+}
+
+.offcanvas-backdrop {
+    backdrop-filter: blur(4px);
+    background-color: transparent;
+
+    &.show {
+        opacity: 1;
+    }
+
+    &:after {
+        @include absolute;
+        content: '';
+        background: rgba($modal-backdrop-bg, $modal-backdrop-opacity);
+        z-index: 1042;
+    }
+}

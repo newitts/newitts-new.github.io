@@ -1,0 +1,28 @@
+.card-contact.card-fullwidth-m.card.card-noshadow-mobile.border-0.mb-53.mb-md-35
+    .card-header.border-bottom-0.pt-33.pb-0.pb-xl-17
+        .border-bottom
+            .row-title.row.justify-content-between.align-items-center.pb-2
+                .col-auto
+                    h2.h5 Contact details
+                .col-auto.ms-auto.text-end
+                    small.fw-medium.d-block.text-secondary.mb-xl-12 Please enter yours and the recipient's contact details
+    .card-body
+        .row.gx-3.gy-4
+            .col-md-6
+                label.form-label(for="contact_fullName") Your full name
+                input.form-control(id="contact_fullName" type="text" placeholder="Jonathan Doe")
+            .col-md-6
+                label.form-label(for="contact_fullName_recipient") Recipient’s full name
+                input.form-control(id="contact_fullName_recipient" type="text" placeholder="Jane Appleseed")
+            .col-md-6
+                label.form-label(for="contact_email") Your email
+                input.form-control(id="contact_email" type="email" placeholder="name@email.com")
+            .col-md-6
+                label.form-label(for="contact_recipient_phone") Recipient’s daytime phone
+                input.form-control(id="contact_recipient_phone" type="tel" placeholder="+44 07911 123456")
+            .col-12.mt-2
+                .form-check.mb-xl-2
+                    input#contact_offers.form-check-input(type='checkbox')
+                    label.form-check-label(for='contact_offers')
+                        | Send me personalised, exclusive product offers
+

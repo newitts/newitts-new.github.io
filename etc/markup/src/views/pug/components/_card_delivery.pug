@@ -1,0 +1,85 @@
+.card-delivery.card-fullwidth-m.card.card-noshadow-mobile.border-0.mb-3.mb-md-35
+    .card-header.border-bottom-0.pt-33.pb-0
+        .border-bottom
+            .row-title.row.justify-content-between.align-items-center.pb-2
+                .col-auto
+                    h2.card-title.h5 Delivery
+                .col-auto.ms-auto.text-end
+                    small.fw-medium.d-block.text-dark.opacity-60.mb-xl-12 Free UK Delivery on orders over £500
+
+    .card-body
+        .select-open-close
+            .select-opener.row.gx-3.gx-xl-35.align-items-center.mb-4.mb-xl-33
+                .col-auto
+                    label.form-label.small.text-secondary.fw-medium Select your country:
+                .col-md-6
+                    .me-xl-n3
+                        select.form-select.form-select-custom(aria-label="Select country for delivery" data-show-target="#delivery-block" data-show-class="select-slide-active")
+                            include ../templates/_select_country_option
+            #delivery-block.select-slide
+                .select-slide_holder
+                    .vstack.gap-33.mb-4
+                        .check-input-delivery.card.shadow-none
+                            .card-body
+                                .row.justify-content-between.align-items-center.gx-3
+                                    .col-9.col-sm-10
+                                        .row.gx-2.gx-xl-3
+                                            .col-auto
+                                                input.form-check-input(type="radio", name="delivery" id="standart_delivery")
+                                            .col
+                                                strong.check-title.h6.d-block.mb-15 #[span.delivery-type Standard Delivery] #[span.pointer] #[span.delivery-price £6.95]
+                                                small.delivery-info.d-block.text-dark.opacity-60 Estimated delivery by Oct 10 - Oct 11
+                                    .col-3.col-sm-2
+                                        .img-box.ms-auto
+                                            picture
+                                                source(srcset='images/logo-dpd-m.png, images/logo-dpd-m@2x.png 2x', media='(max-width: 991px)')
+                                                source(srcset='images/logo-dpd-d.png, images/logo-dpd-d@2x.png 2x')
+                                                img(src='images/logo-dpd-d.png', alt="DPD", width='67', height='30')
+                            label.label-input(for="standart_delivery")
+
+                        .check-input-delivery.check-open-close.card.shadow-none
+                            .card-body
+                                .row.justify-content-between.align-items-center.gx-3
+                                    .col-auto
+                                        .row.gx-2.gx-xl-3
+                                            .col-auto
+                                                input.form-check-input(type="radio", name="delivery" id="express_delivery" data-show-target="#delivery-date-block" data-show-class="check-slide-active")
+                                            .col-auto
+                                                strong.check-title.h6.d-block.mb-15 #[span.delivery-type Express Delivery] #[span.pointer] #[span.delivery-price £12.95]
+                                                small.delivery-info.d-block.text-dark.opacity-60 Select your delivery day
+                                    .col-auto
+                                        .img-box
+                                            picture
+                                                source(srcset='images/logo-dpd-m.png, images/logo-dpd-m@2x.png 2x', media='(max-width: 991px)')
+                                                source(srcset='images/logo-dpd-d.png, images/logo-dpd-d@2x.png 2x')
+                                                img(src='images/logo-dpd-d.png', alt="DPD", width='67', height='30')
+                                #delivery-date-block.check-slide
+                                    .check-slide_holder.pt-3
+                                        .row
+                                            .col-md-6
+                                                select.form-select
+                                                    option Tuesday, October 12, 2022
+                                                    option Tuesday, October 13, 2022
+                                                    option Tuesday, October 14, 2022
+                                                    option Tuesday, October 15, 2022
+                                                    option Tuesday, October 16, 2022
+                                                    option Tuesday, October 17, 2022
+                                                    option Tuesday, October 18, 2022
+                            label.label-input(for="express_delivery")
+
+                        .check-input-delivery.card.shadow-none
+                            .card-body
+                                .row.justify-content-between.align-items-center.gx-3
+                                    .col-auto
+                                        .row.gx-2.gx-xl-3
+                                            .col-auto
+                                                input.form-check-input(type="radio", name="delivery" id="myself_delivery")
+                                            .col-auto
+                                                strong.check-title.h6.d-block.mb-15 #[span.delivery-type Collect from warehouse] #[span.pointer] #[span.delivery-price Free]
+                                                small.delivery-info.d-block.text-dark.opacity-60
+                                                    address.d-xl-inline.mb-0 Newitts.com, York, YO60 7RE, GB. 
+                                                    span.schedule 8am to 4pm Mon to Fri.
+                                label.label-input(for="myself_delivery")
+
+
+

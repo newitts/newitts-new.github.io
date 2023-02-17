@@ -1,0 +1,21 @@
+//- +productBlock({
+    titleProduct: 'Gray Nicolls Test Originals',
+    propertiesProduct: ' Orange/Size 7',
+    codeCatalogue: 'IT084346',
+    categoryProduct: 'Category'
+//- })
+mixin productBlock(obj)
+    .product-block
+        if obj.titleProduct
+            strong.title-product.h5.d-block.mb-15!= obj.titleProduct
+        .product-info.text-dark.opacity-60.fw-medium.pb-35.pb-md-15
+            if obj.propertiesProduct
+                p.small.mb-0!= obj.propertiesProduct
+            if obj.codeCatalogue
+                dl.product-info_list.small.row.gx-1.mb-0
+                    dt.fw-medium.col-auto Catalogue Code:
+                    dd.col-auto= obj.codeCatalogue
+            if obj.categoryProduct
+                dl.product-info_list.small.row.gx-1.mb-0
+                    dt.fw-medium.col-auto Shop:
+                    dd.col-auto!= obj.categoryProduct

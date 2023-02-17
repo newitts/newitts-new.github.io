@@ -1,0 +1,28 @@
+.card-my-order.card-fullwidth-md.card.card-noshadow-mobile.border-0.mb-3.mb-md-35
+    .card-header.border-bottom-0.pt-33.pb-0
+        .border-bottom
+            .row-title.pb-15
+                h3.card-title.title-iconed
+                    //- i.icon.icon-creditcard
+                    <svg class="icon icon-creditcard"><use xlink:href="#icon-creditcard"></use></svg><span class="name"> icon-creditcard</span>
+                    | My orders
+    .card-body
+        .py-xl-5
+            table.table-my-order.table-responsive-custom.table.table-striped.mb-5.mb-lg-6.mb-xl-7
+                thead
+                    tr
+                        each item in ['Order Number', 'Order Date', 'Order Total', 'Status']
+                            th= item
+                tbody
+                    tr
+                        td(data-label='Order Number') #[span IT064870]
+                        td(data-label='Order Date') #[span 30 Sep 2022]
+                        td(data-label='Order Total') #[span £16.66]
+                        td(data-label='Status')
+                            span.text-success-450 Processing
+                    -for (var i = 0; i < 4; i++)
+                        tr
+                            td(data-label='Order Number') #[span IT064870]
+                            td(data-label='Order Date') #[span 30 Sep 2022]
+                            td(data-label='Order Total') #[span £16.66]
+                            td(data-label='Status') #[span AMA664]

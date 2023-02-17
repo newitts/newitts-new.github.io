@@ -1,0 +1,16 @@
+section.section.py-3
+    .container-xxl
+        .twocolumns-sidebar-right.row.gx-35
+            #content.col-lg-8
+                include ../components/_card_contact_details
+
+                include ../components/_card_delivery_address
+
+                include ../components/_card_invoice_address
+
+            .sidebar.col-lg-4
+                .sidebar_sticky_order
+                    .sidebar_inner
+                        -var inputPromoBlock = true
+                        include ../components/_card_order
+                        include ../components/_btn_checkout_continue

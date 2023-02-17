@@ -1,0 +1,122 @@
+.card-gallery-like {
+    .title-section {
+        font-size: rem-calc(28);
+        line-height: calc(32 / 28);
+
+        @include media-breakpoint-down(md) {
+            margin-bottom: rem-calc(8);
+        }
+
+        @include media-breakpoint-up(md) {
+            font-size: rem-calc(20);
+            line-height: calc(24 / 20);
+            margin-bottom: 3px;
+        }
+    }
+}
+
+.card-description {
+    .card-header,
+    .card-body,
+    .card-footer {
+        padding-left: 24px;
+        padding-right: 24px;
+
+        @include media-breakpoint-up(lg) {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+    }
+
+    .card-body {
+        padding-top: rem-calc(40);
+
+        @include media-breakpoint-up(lg) {
+            padding-top: rem-calc(30);
+            padding-bottom: rem-calc(10);
+        }
+    }
+}
+
+.card-delivery,
+.card-product-checkout {
+    .card-title {
+        @include media-breakpoint-down(md) {
+            font-size: rem-calc(22);
+            margin-bottom: rem-calc(2);
+        }
+    }
+}
+
+.card-delivery {
+    .card-header {
+        small,
+        .small {
+            @include media-breakpoint-down(md) {
+                font-size: rem-calc(13);
+            }
+        }
+    }
+
+    .select-open-close {
+        padding-top: 2px;
+
+        @include media-breakpoint-up(xl) {
+            padding-top: rem-calc(8);
+        }
+    }
+
+    .select-slide_holder {
+        padding: rem-calc(6 0 21);
+    }
+
+    .delivery-info {
+        line-height: calc(17 / 14);
+    }
+}
+
+.card-order {
+    .card-title {
+        @include media-breakpoint-down(md) {
+            font-size: rem-calc(30);
+        }
+    }
+
+    .table-order {
+        margin-top: -1px;
+    }
+}
+
+
+.card-partners-logo {
+    img {
+        filter: grayscale(1);
+        opacity: 0.5;
+    }
+}
+
+.card-address {
+    .card-header,
+    .card-body,
+    .card-footer {
+        @include media-breakpoint-up(xl) {
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+    }
+
+    .card-body {
+        padding-top: rem-calc(8);
+        padding-bottom: rem-calc(2);
+    }
+
+    .form-check-label {
+        font-size: 100%;
+    }
+}
+
+.card-returning {
+    .title-product {
+        font-size: $h6-font-size;
+    }
+}

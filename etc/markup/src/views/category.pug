@@ -1,0 +1,15 @@
+//- -var bodyClass = ''
+-var wrapClass = 'bg-light'
+-var badgeNavActive = true
+-var navbarShort = true
+
+include ./pug/common/_head
+	block content
+		include ./pug/common/_header
+
+		main#main
+			include ./pug/sections/_hero_category
+
+			include ./pug/sections/_filters_result
+
+		include ./pug/common/_footer

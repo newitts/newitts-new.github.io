@@ -1,0 +1,13 @@
+.section-faq.py-3.py-lg-4.py-xl-54
+    .container-xxl
+        .twocolumns.twocolumns-sidebar-left.accordion-to-tabs-md.row.flex-md-row-reverse.gx-35
+            #content.col-md-8.col-lg-9
+                include ../templates/_faq_tabs_acc
+            #sidebar.col-md-4.col-lg-3.d-none.d-md-block
+                .card-nav-tabs.card.border-0
+                    .card-body
+                        ul.nav-tabs-buttons.nav.nav-pills
+                            li.nav-item: button.nav-link.active(data-bs-toggle="tab" data-bs-target="#faqTab_one" type="button" role="tab" aria-selected="false") Contact us
+                            li.nav-item: button.nav-link(data-bs-toggle="tab" data-bs-target="#faqTab_two" type="button" role="tab" aria-selected="false") Orders &amp; payemnts
+                            li.nav-item: button.nav-link(data-bs-toggle="tab" data-bs-target="#faqTab_three" type="button" role="tab" aria-selected="false") Delivery Costs
+                            li.nav-item: button.nav-link(data-bs-toggle="tab" data-bs-target="#faqTab_four" type="button" role="tab" aria-selected="false") Returns policy

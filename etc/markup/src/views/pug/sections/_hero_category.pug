@@ -1,0 +1,17 @@
+section.section-hero.pt-35.pb-3.pb-lg-25
+	.container-xxl
+		.hero-visual.card.border-0.shadow-none.text-white.text-center.text-lg-start.overflow-hidden
+			.visual-holder
+				+retinaJpg2x({
+					addImgClass: '',
+					imgName: 'img-hero_category-01',
+					imgWidth: '1240',
+					imgHeight: '219',
+					alt: ''
+				})
+			.card-body
+				-var itemsBreadcrumbs = ['Home', 'Sports', 'Football']
+				-var itemLastBreadcrumbs = 'Football Clothing'
+				include ../components/_breadcrumb
+
+				h1.title-page.display-4.text-reset.mb-5 Football Clothing

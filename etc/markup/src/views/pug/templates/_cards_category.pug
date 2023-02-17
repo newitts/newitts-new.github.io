@@ -1,0 +1,87 @@
+.row.row-cols-2.row-cols-lg-3.row-cols-xxl-4.gx-17.gx-xl-35.mb-xl-5
+    .col
+        +cardProduct({
+            addClassCard: 'shadow-none',
+            addImgClass: '',
+            imgName: 'img-card_product-01',
+            imgWidth: '275',
+            imgHeight: '275',
+            favorite: true,
+            addClassFavorite: 'favorite-link',
+            iconFavoriteName: 'heart',
+            iconFavoriteID: 'product_01',
+            addBadgeClass: 'badge-product bg-warning text-dark text-uppercase',
+            badge: 'NEW IN',
+            title: 'Mitre 12 Ball Sack',
+            price: '£24.00',
+            oldPrice: '£26.00',
+            qtyReviews: '(15)',
+            rating: true,
+            addRatingClass: '',
+            currentRating: '4'
+        })
+    .col
+        +cardProduct({
+            addClassCard: 'shadow-none',
+            addImgClass: '',
+            imgName: 'img-card_product-02',
+            imgWidth: '275',
+            imgHeight: '275',
+            favorite: true,
+            addClassFavorite: 'favorite-link',
+            iconFavoriteName: 'heart',
+            iconFavoriteID: 'product_02',
+            addBadgeClass: 'badge-product bg-warning text-dark',
+            badge: '',
+            addFavoriteLink: 'selected',
+            title: 'Mitre 12 Ball Sack',
+            price: '£24.00',
+            qtyReviews: '(58)',
+            rating: true,
+            addRatingClass: '',
+            currentRating: '4'
+        })
+    .col
+        +cardProduct({
+            addClassCard: 'shadow-none',
+            addImgClass: '',
+            imgName: 'img-card_product-02',
+            imgWidth: '275',
+            imgHeight: '275',
+            favorite: true,
+            addClassFavorite: 'favorite-link',
+            iconFavoriteName: 'heart',
+            iconFavoriteID: 'product_02',
+            addBadgeClass: 'badge-product bg-warning text-dark',
+            badge: '',
+            addFavoriteLink: 'selected',
+            title: 'Mitre 12 Ball Sack',
+            price: '£24.00',
+            qtyReviews: '(58)',
+            rating: true,
+            addRatingClass: '',
+            currentRating: '4'
+        })
+
+    -for (var i = 0; i <17; i++)
+        .col
+            +cardProduct({
+                addClassCard: 'shadow-none',
+                addImgClass: '',
+                imgName: 'img-card_product-02',
+                imgWidth: '275',
+                imgHeight: '275',
+                favorite: true,
+                addClassFavorite: 'favorite-link',
+                iconFavoriteName: 'heart',
+                iconFavoriteID: '',
+                addBadgeClass: 'badge-product bg-warning text-dark',
+                badge: '',
+                addFavoriteLink: 'selected',
+                title: 'Mitre 12 Ball Sack',
+                price: '£24.00',
+                qtyReviews: '(58)',
+                rating: true,
+                addRatingClass: '',
+                currentRating: '4'
+            })

@@ -1,0 +1,220 @@
+.swiper {
+    @media (hover: hover) {
+        &:hover {
+            .swiper-button-prev,
+            .swiper-button-next {
+                &:not(.swiper-button-disabled) {
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+        }
+
+        .swiper-button-prev,
+        .swiper-button-next {
+            &:not(.swiper-button-disabled) {
+                @include media-breakpoint-up(lg) {
+                    opacity: 0;
+                    visibility: hidden;
+                }
+            }
+        }
+    }
+
+    &.swiper-thumbs {
+        .swiper-button-prev,
+        .swiper-button-next {
+            opacity: 1 !important;
+            visibility: visible !important;
+        }
+    }
+}
+
+.swiper-pagination-bullet {
+    @include animate(background-color border-color);
+    @include size(12px);
+    border: 1px solid #7C7B7B;
+    background-color: transparent;
+    opacity: 1;
+}
+
+.swiper-pagination-bullet:focus,
+.swiper-pagination-bullet:hover,
+.swiper-pagination-bullet-active {
+    background-color: $warning;
+    border-color: $warning;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    @include animate(background-color color opacity visibility);
+    @include size(38px);
+    filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.15));
+    font-size: rem-calc(16);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $light;
+    border-radius: 50%;
+    color: #000;
+
+    &:hover,
+    &:focus {
+        color: $warning;
+    }
+
+    &.swiper-button-disabled {
+        opacity: 0;
+    }
+}
+
+.swiper-button-prev {
+    &:after {
+        @include icon-icomoon('\e913', inherit);
+    }
+}
+
+.swiper-button-next {
+    &:after {
+        @include icon-icomoon('\e914', inherit);
+    }
+}
+
+.swiper-scrollbar-container {
+    @include scroll-custom(2px, 2px, rgba(#1c1c1c, .1), rgba(#1c1c1c, .8));
+    padding: rem-calc(6 0 1);
+
+    .swiper-products & {
+        padding-top: rem-calc(26);
+    }
+}
+
+.swiper-horizontal > .swiper-scrollbar,
+.swiper-scrollbar.swiper-scrollbar-horizontal {
+    height: 2px;
+    margin: rem-calc(10) 0 rem-calc(10) -4px;
+    width: calc(100vw - 56px);
+    position: relative;
+    bottom: 0;
+}
+
+.swiper-scrollbar-drag {
+    background-color: rgba(#000, .8);
+}
+
+// my swipers
+.swiper-products {
+    margin: 0 -16px;
+    padding: 0 20px;
+
+    .swiper-slide {
+        width: 90vw;
+        max-width: 326px;
+
+        @include media-breakpoint-up(lg) {
+            width: 275px;
+            max-width: none;
+        }
+    }
+
+    .card-product {
+        max-width: 100%;
+        margin-bottom: 0 !important;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        @include media-breakpoint-down(lg) {
+            display: none !important;
+        }
+
+        @include media-breakpoint-up(lg) {
+            top: 37.6%;
+        }
+    }
+
+    .swiper-button-prev {
+        @include media-breakpoint-up(lg) {
+            left: 5px;
+        }
+    }
+
+    .swiper-button-next {
+        @include media-breakpoint-up(lg) {
+            right: 5px;
+        }
+    }
+}
+
+.swiper-esentials {
+    margin: 0 -16px;
+    padding: 0 16px;
+
+    @include media-breakpoint-up(xl) {
+        margin-right: -22px;
+        padding-right: 12px;
+    }
+
+    .swiper-slide {
+        width: 80vw;
+        max-width: 326px;
+
+        @include media-breakpoint-up(lg) {
+            width: calc(100% / 3 - 16px);
+            max-width: calc(100% / 3 - 16px);
+        }
+    }
+
+    .card-text {
+        max-width: 100%;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        @include media-breakpoint-down(lg) {
+            display: none !important;
+        }
+    }
+}
+
+.swiper-brands {
+    margin: 0 -16px;
+    padding: 0 16px;
+
+    .swiper-slide {
+        width: 80vw;
+        max-width: 174px;
+
+        @include media-breakpoint-up(lg) {
+            max-width: 176px;
+        }
+
+        @include media-breakpoint-up(xl) {
+            max-width: calc(100vw / 6 - 38px);
+        }
+    }
+
+    .swiper-scrollbar-container {
+        padding: rem-calc(24 0 0);
+    }
+}
+
+.swiper-bought-together {
+    margin: 0 calc(#{-$grid-gutter-width} / 2);
+    padding: 0 calc(#{$grid-gutter-width} / 2);
+
+    .swiper-slide {
+        width: 40vw;
+        max-width: 154px;
+
+        @include media-breakpoint-up(lg) {
+            width: auto;
+            max-width: none;
+        }
+    }
+
+    .swiper-pagination {
+        position: static;
+        margin: 2px 0;
+    }
+}

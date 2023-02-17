@@ -1,0 +1,50 @@
+section.section-account.py-3
+    .container-xxl
+        h1.fw-bold.mb-35.mb-lg-37 Account
+        .twocolumns.twocolumns-sidebar-left.row.flex-md-row-reverse.gx-35
+            #content.col-md-8.col-lg-9
+                include ../components/_card_my_orders
+            #sidebar.col-md-4.col-lg-3
+                .card-fullwidth-md.card.card-noshadow-mobile.text-dark.border-0.mb-3.mb-md-35
+                    .card-header.border-bottom-0.pt-33.pb-0
+                        .border-bottom
+                            .row-title.pb-15
+                                h3.card-title.title-iconed
+                                    //- i.icon.icon-user
+                                    <svg class="icon icon-user"><use xlink:href="#icon-user"></use></svg><span class="name"> icon-user</span>
+                                    | Profile summary
+                    .card-body
+                        .pt-12.pb-4
+                            dl.list-contact.d-flex.mb-0
+                                dt.fw-normal Name:
+                                dd Matt Ross
+                            dl.list-contact.d-flex.mb-0
+                                dt.fw-normal Email:
+                                dd matt@tronik.co.uk
+                        .border-top.pt-4.pb-15
+                            .vstack.gap-35.mb-4
+                                .vstack-row
+                                    a.btn.btn-lg.btn-outline-dark.d-block(href="#") View/edit profile
+                                .vstack-row
+                                    a.btn.btn-lg.btn-outline-dark.d-block(href="#") Marketing preferences
+                        hr
+
+                .card-fullwidth-md.card.card-noshadow-mobile.text-dark.border-0.mb-3.mb-md-35
+                    .card-header.border-bottom-0.pt-33.pb-0
+                        .border-bottom
+                            .row-title.pb-15
+                                h3.card-title.title-iconed
+                                    //- i.icon.icon-edit-report
+                                    <svg class="icon icon-edit-report"><use xlink:href="#icon-edit-report"></use></svg><span class="name"> icon-edit-report</span>
+                                    | Default address
+                    .card-body
+                        .pt-12.pb-15
+                            address Tronik Ltd #[br] Platform #[br] New Station Street #[br] Leeds, LS1 4JB
+                        .border-top.py-3.py-xl-4
+                            dl.list-contact.d-flex.mb-0
+                                dt.fw-normal Tel:
+                                dd #[a(href="tel:+4407777777777") +44 07777777777]
+                        .border-top.border-bottom-0.py-4
+                            .vstack.gap-35
+                                .vstack-row
+                                    a.btn.btn-lg.btn-outline-dark.d-block(href="#") View/edit address

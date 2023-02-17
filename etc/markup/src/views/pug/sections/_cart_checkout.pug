@@ -1,0 +1,25 @@
+section.section.py-3
+    .container-xxl
+        .row.align-items-center.gx-lg-52.pb-3.pb-md-0
+            .col-auto
+                h1.fw-bold.mb-35.mb-lg-37 Your Basket
+            .col-md-auto
+                a.btn.btn-dark.btn-custom.d-block.d-md-inline-block.mb-35.mb-xl-37(href="#")
+                    //- i.icon.icon-delivery
+                    <svg class="icon icon-delivery"><use xlink:href="#icon-delivery"></use></svg><span class="name"> icon-delivery</span>
+                    span.btn-text You’ve qualified for free shipping!
+        .twocolumns-sidebar-right.row.gx-35
+            #content.col-lg-8
+                include ../components/_card_delivery
+
+                include ../components/_card_products
+
+                -var cardGalleryTitle = 'You might also like'
+                include ../templates/_card_gallery_like
+
+            .sidebar.col-lg-4
+                .sidebar_sticky_order
+                    .sidebar_inner
+                        -var inputPromoBlock = true
+                        include ../components/_card_order
+                        include ../components/_checkout_with

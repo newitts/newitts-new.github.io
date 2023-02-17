@@ -1,0 +1,97 @@
+// .section-sports-brands {}
+
+.heading-page {
+  text-align: center;
+  margin: rem-calc(0 0 32);
+
+  @include media-breakpoint-up(lg) {
+    margin-bottom: rem-calc(48);
+  }
+
+  @include media-breakpoint-up(xl) {
+    margin-bottom: rem-calc(60);
+  }
+}
+
+.letter-anchor-hold {
+  @include scroll-custom;
+  background-color: $gray-400;
+  padding: rem-calc(7 0 8);
+  margin: rem-calc(0 0 16);
+  text-align: center;
+
+  @media screen and (max-width: 899px) {
+    padding-bottom: rem-calc(2);
+  }
+
+  @include media-breakpoint-up(lg) {
+    margin-bottom: rem-calc(28);
+  }
+
+  @include media-breakpoint-up(xl) {
+    margin-bottom: rem-calc(39);
+  }
+}
+
+.letter-anchor-wrap {
+  overflow-x: auto;
+}
+
+.letter-anchor-list {
+  @extend %listreset;
+  display: inline-flex;
+  flex-wrap: nowrap;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: rem-calc(20);
+  color: $gray-900;
+  margin: rem-calc(0 -10 0 -11);
+  min-width: 884px;
+
+  li {
+    flex-shrink: 0;
+    margin: rem-calc(0 10 0 11);
+  }
+
+  a {
+    @include animate (color);
+    text-decoration: none;
+    color: inherit;
+
+    &:hover {
+      color: $warning;
+    }
+  }
+}
+
+.brand-group {
+  padding: rem-calc(16 0);
+
+  @include media-breakpoint-up(lg) {
+    display: flex;
+    align-items: flex-start;
+    padding-top: rem-calc(20);
+    padding-bottom: rem-calc(20);
+  }
+
+  @include media-breakpoint-up(xl) {
+    padding-top: rem-calc(25);
+    padding-bottom: rem-calc(25);
+  }
+
+  .letter {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: rem-calc(32);
+    line-height: calc(34 / 32);
+    display: block;
+    margin: rem-calc(0 0 10);
+    width: rem-calc(70);
+    color: $black;
+    flex-shrink: 0;
+
+    @include media-breakpoint-up(lg) {
+      margin-bottom: 0;
+    }
+  }
+}

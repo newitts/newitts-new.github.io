@@ -1,0 +1,32 @@
+.section-hero {
+    .column {
+        position: relative;
+    }
+}
+
+$grid-padding: 5.69777;
+
+.hero-grid {
+    min-height: 80vh;
+
+    @include media-breakpoint-up(md) {
+        grid-gap: 20px;
+        grid-template-columns: calc(58.45% - 10px) calc(41.55% - 10px);
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .column-left {
+        @include media-breakpoint-up(md) {
+            grid-column: 1 / 2;
+            grid-row: 1 / 3;
+        }
+    }
+
+    .card-fly {
+        height: 100%;
+
+        @include media-breakpoint-up(md) {
+            margin-bottom: 0 !important;
+        }
+    }
+}

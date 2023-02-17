@@ -1,0 +1,18 @@
+//- +cardText({
+    addClassCard: 'shadow-none',
+    imgName: 'img-01',
+    imgWidth: '',
+    imgHeight: '',
+    title: '',
+    text: ''
+//- })
+mixin cardText(obj)
+    a.card-text.card(href="#", class=''+ obj.addClassCard)
+        if (obj.imgName)
+            .card-img
+                +retinaJpg2x(obj)
+        .card-body
+            if (obj.title)
+                h3.card-title!= obj.title
+            if (obj.text)
+                p!= obj.text

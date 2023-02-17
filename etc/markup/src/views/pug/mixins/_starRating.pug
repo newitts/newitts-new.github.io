@@ -1,0 +1,40 @@
+//- +starRating({
+	addRatingClass: 'rating-large',
+	disabledRating: true,
+	ratingID: '',
+	currentRating: '5'
+//- })
+
+mixin starRating(obj)
+	.rating(class={disabled: obj.disabledRating === true}, class=''+ obj.addRatingClass)
+		.rating-holder
+			if obj.currentRating == '5'
+				input(id='star5_' + obj.ratingID, type='radio' value='5' name='rating_'+ obj.ratingID checked)
+			else
+				input(id='star5_' + obj.ratingID, type='radio' value='5' name='rating_'+ obj.ratingID)
+			label.star(for='star5_' + obj.ratingID, title='5 stars')
+				<svg class="icon icon-star"><use xlink:href="#icon-star"></use></svg>
+			if obj.currentRating == '4'
+				input(id='star4_' + obj.ratingID, type='radio' value='4' name='rating_'+ obj.ratingID checked)
+			else
+				input(id='star4_' + obj.ratingID, type='radio' value='4' name='rating_'+ obj.ratingID)
+			label.star(for='star4_' + obj.ratingID, title='4 stars')
+				<svg class="icon icon-star"><use xlink:href="#icon-star"></use></svg>
+			if obj.currentRating == '3'
+				input(id='star3_' + obj.ratingID, type='radio' value='3' name='rating_'+ obj.ratingID checked)
+			else
+				input(id='star3_' + obj.ratingID, type='radio' value='3' name='rating_'+ obj.ratingID)
+			label.star(for='star3_' + obj.ratingID, title='3 stars')
+				<svg class="icon icon-star"><use xlink:href="#icon-star"></use></svg>
+			if obj.currentRating == '2'
+				input(id='star2_' + obj.ratingID, type='radio' value='2' name='rating_'+ obj.ratingID checked)
+			else 
+				input(id='star2_' + obj.ratingID, type='radio' value='2' name='rating_'+ obj.ratingID)
+			label.star(for='star2_' + obj.ratingID, title='2 stars')
+				<svg class="icon icon-star"><use xlink:href="#icon-star"></use></svg>
+			if obj.currentRating == '1'
+				input(id='star1_' + obj.ratingID, type='radio' value='1' name='rating_'+ obj.ratingID checked)
+			else 
+				input(id='star1_' + obj.ratingID, type='radio' value='1' name='rating_'+ obj.ratingID)
+			label.star(for='star1_' + obj.ratingID, title='1 star')
+				<svg class="icon icon-star"><use xlink:href="#icon-star"></use></svg>

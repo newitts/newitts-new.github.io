@@ -1,0 +1,37 @@
+#offcanvasAddCart.offcanvas-add-cart.offcanvas_main.offcanvas.offcanvas-end(tabindex='-1' aria-labelledby='offcanvasRightLabel')
+	.offcanvas-header.border-bottom
+		.col-auto
+			h2.card-title.h5.mb-0 
+				<svg class="text-success icon icon-checked-large"><use xlink:href="#icon-checked-large"></use></svg><span class="name"> icon-checked-large</span>
+				| Added to cart
+		.col-auto
+			button.btn-close(type='button' data-bs-dismiss='offcanvas' data-bs-target='#offcanvasAddCart' aria-label='Close')
+	.offcanvas-body
+		.cart-ifno
+			.row.gx-35
+				.col-auto
+					.img-product
+						+imgJpg2x({
+							imgName: 'img-card_product-02-m',
+							imgWidth: '92',
+							imgHeight: '92',
+							alt: ''
+						})
+				.col
+					.pb-67
+						strong.title-product.h5.d-block.mb-1 Gray Nicolls Test Originals
+						dl.sum-total.mb-17
+							dt.sum-text.fw-medium: span.small Total:
+							dd: strong.price.text-danger £336.00
+
+						//- a.btn-delete.btn.btn-sm.btn-outline-secondary(href='#')
+						button.btn-delete.btn.btn-outline-secondary(type='reset')
+							<svg class="icon icon-delete"><use xlink:href="#icon-delete"></use></svg><span class="name"> icon-delete</span>
+							span.visually-hidden Delete item
+		.buttons-container.pb-67
+			a.btn.btn-lg.btn-dark.height-auto.d-block.mb-3(href="#" data-bs-dismiss='offcanvas' data-bs-target='#offcanvasAddCart' aria-label='Close') Continue shopping
+			a.btn.btn-lg.btn-outline-dark.d-block.mb-3(href="#") View cart &amp; checkout
+
+		.gallery-container.pt-2
+			h4.h5.title-section.mb-3 Frequently bought together
+			include ../components/_swiper_products_together

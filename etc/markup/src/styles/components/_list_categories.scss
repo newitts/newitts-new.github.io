@@ -1,0 +1,16 @@
+.list-categories {
+    font-weight: $font-weight-medium;
+    font-size: rem-calc(18);
+
+    .search-results & {
+        padding-top: 2px;
+    }
+
+    a {
+        @include link-color($body-color, $warning);
+    }
+
+    .nav-link {
+        padding: 4px 0 3px;
+    }
+}

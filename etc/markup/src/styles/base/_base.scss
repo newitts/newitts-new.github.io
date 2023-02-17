@@ -1,0 +1,47 @@
+// adaptive images
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: top;
+  display: inline-block;
+}
+
+b,
+strong {
+  font-weight: $font-weight-medium;
+}
+
+a[href*="tel:"],
+a[href^="tel:"] {
+  @include link-inherit;
+}
+
+small,
+.small {
+  display: inline-block;
+  line-height: $small-line-height;
+
+  small,
+  .small {
+    font-size: calc(12 / 14 * 100%);
+
+    .section-order & {
+      line-height: 1;
+    }
+  }
+}
+
+// google map fix
+.gm-style img {
+  max-width: none;
+}
+
+iframe {
+  @include media-breakpoint-down(md) {
+    width: 100%;
+  }
+}
+
+.resize-active * {
+  transition: none !important;
+}

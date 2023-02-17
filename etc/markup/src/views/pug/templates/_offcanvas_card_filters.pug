@@ -1,0 +1,204 @@
+#offcanvasFilters.offcanvas-filters.offcanvas_main.offcanvas-md.offcanvas-end(tabindex='-1' aria-labelledby='offcanvasFilters')
+	.offcanvas-header.border-bottom
+		.col-auto
+			h2.card-title.h5.mb-0 Filters #[span.number-info.text-light-500 (1)]
+		.col-auto
+			button.btn-close(type='button' data-bs-dismiss='offcanvas' data-bs-target='#offcanvasFilters' aria-label='Close')
+	.offcanvas-body
+		.card-filters.card.border-0
+			.card-header.border-bottom-0.d-none.d-md-block
+				.row-title.row.justify-content-between.align-items-center
+					.col-auto
+						h2.card-title.h5.mb-0 Filter by #[span.number-info.text-light-500 (1)]
+					.col-auto.ms-auto
+						input.btn-clear.btn.btn-link.btn-sm.text-uppercase.p-0( type="reset" value="CLEAR FILTERS")
+			.card-body
+				#accordionFilters.accordion-filters.accordion
+					.accordion-item.border-0.border-bottom.d-md-none
+						h2#heading_00.accordion-header
+							button.accordion-button.collapsed.px-0(type='button' data-bs-toggle='collapse' data-bs-target='#collapse_00' aria-expanded='false' aria-controls='collapse_00') Sort by
+						#collapse_00.accordion-collapse.collapse(aria-labelledby='heading_00')
+							.accordion-body.px-0
+								.form-check
+									input#check_sort_01.form-check-input(type='radio' name="sort_by")
+									label.form-check-label(for='check_sort_01')
+										| Interest
+								.form-check
+									input#check_sort_02.form-check-input(type='radio' name="sort_by")
+									label.form-check-label(for='check_sort_02')
+										| Demand
+								.form-check
+									input#check_sort_03.form-check-input(type='radio' name="sort_by")
+									label.form-check-label(for='check_sort_03')
+										| Price: Low to high
+								.form-check
+									input#check_sort_04.form-check-input(type='radio' name="sort_by")
+									label.form-check-label(for='check_sort_04')
+										| Price: High to low
+								.form-check
+									input#check_sort_05.form-check-input(type='radio' name="sort_by")
+									label.form-check-label(for='check_sort_05')
+										| Alphabetical: A to Z
+								.form-check
+									input#check_sort_06.form-check-input(type='radio' name="sort_by")
+									label.form-check-label(for='check_sort_06')
+										| Alphabetical: Z to A
+
+					.accordion-item.border-0.border-bottom
+						h2#heading_01.accordion-header
+							button.accordion-button.collapsed.px-0(type='button' data-bs-toggle='collapse' data-bs-target='#collapse_01' aria-expanded='false' aria-controls='collapse_01') Price range
+						#collapse_01.accordion-collapse.collapse(aria-labelledby='heading_01')
+							.accordion-body.px-0
+								.d-md-none
+									.range-input-container.pb-1
+										.row.justify-content-between
+											.col-4
+												input.form-control.rounded-pill(type="text" placeholder="£ Min")
+											.col-4
+												input.form-control.rounded-pill(type="text" placeholder="£ Max")
+									.range-slider-container
+										include ../components/_range_slider
+								.d-none.d-md-block
+									.price-block
+										.form-check
+											input#check_price_01.form-check-input(type='checkbox')
+											label.form-check-label(for='check_price_01')
+												| £10 to £20 #[span.number-info.text-light-500 (34)]
+										.form-check
+											input#check_price_02.form-check-input(type='checkbox')
+											label.form-check-label(for='check_price_02')
+												| £20 to £50 #[span.number-info.text-light-500 (12)]
+										.form-check
+											input#check_price_03.form-check-input(type='checkbox')
+											label.form-check-label(for='check_price_03')
+												| £50 to £100  #[span.number-info.text-light-500 (28)]
+										.form-check
+											input#check_price_04.form-check-input(type='checkbox')
+											label.form-check-label(for='check_price_04')
+												| £100 to £300 #[span.number-info.text-light-500 (15)]
+
+					.accordion-item.border-0.border-bottom
+						h2#heading_02.accordion-header
+							button.accordion-button.collapsed.px-0(type='button' data-bs-toggle='collapse' data-bs-target='#collapse_02' aria-expanded='false' aria-controls='collapse_02') Campaigns
+						#collapse_02.accordion-collapse.collapse(aria-labelledby='heading_02')
+							.accordion-body.px-0
+								.form-check
+									input#check_campaigns_01.form-check-input(type='checkbox')
+									label.form-check-label(for='check_campaigns_01')
+										| On Sale #[span.number-info.text-light-500 (2)]
+								.form-check
+									input#check_campaigns_02.form-check-input(type='checkbox')
+									label.form-check-label(for='check_campaigns_02')
+										| New In #[span.number-info.text-light-500 (2)]
+								.form-check
+									input#check_campaigns_03.form-check-input(type='checkbox')
+									label.form-check-label(for='check_campaigns_03')
+										| Outlet #[span.number-info.text-light-500 (2)]
+
+					.accordion-item.border-0.border-bottom
+						h2#heading_03.accordion-header
+							button.accordion-button.collapsed.px-0(type='button' data-bs-toggle='collapse' data-bs-target='#collapse_03' aria-expanded='false' aria-controls='collapse_03') Range
+						#collapse_03.accordion-collapse.collapse(aria-labelledby='heading_03')
+							.accordion-body.px-0
+								.form-check
+									input#check_range_01.form-check-input(type='checkbox')
+									label.form-check-label(for='check_range_01')
+										| Academy 21 #[span.number-info.text-light-500 (2)]
+								.form-check
+									input#check_range_02.form-check-input(type='checkbox')
+									label.form-check-label(for='check_range_02')
+										| Academy Pro #[span.number-info.text-light-500 (17)]
+								.form-check
+									input#check_range_03.form-check-input(type='checkbox')
+									label.form-check-label(for='check_range_03')
+										| Matchday #[span.number-info.text-light-500 (23)]
+								.form-check
+									input#check_range_04.form-check-input(type='checkbox' disabled)
+									label.form-check-label(for='check_range_04')
+										| Park #[span.number-info.text-light-500 (0)]
+								.form-check
+									input#check_range_05.form-check-input(type='checkbox')
+									label.form-check-label(for='check_range_05')
+										| Strike #[span.number-info.text-light-500 (5)]
+
+								#collapse_03_01.collapse
+									.card.card-body.bg-transparent.border-0.shadow-none.p-0
+										.form-check
+											input#check_range_06.form-check-input(type='checkbox')
+											label.form-check-label(for='check_range_06')
+												| Lorem #[span.number-info.text-light-500 (5)]
+										.form-check
+											input#check_range_07.form-check-input(type='checkbox')
+											label.form-check-label(for='check_range_07')
+												| Ipsum #[span.number-info.text-light-500 (5)]
+										.form-check
+											input#check_range_08.form-check-input(type='checkbox')
+											label.form-check-label(for='check_range_08')
+												| Dolor #[span.number-info.text-light-500 (5)]
+								p
+									a.btn-show-more.btn.btn-sm.btn-link.text-uppercase.p-0(data-bs-toggle='collapse' href='#collapse_03_01' role='button' aria-expanded='false' aria-controls='collapse_03_01')
+										i.ico-plus
+										span.link-text Show #[span.hidden-active more] #[span.visible-active less]
+
+					.accordion-item.border-0.border-bottom
+						h2#heading_04.accordion-header
+							button.accordion-button.collapsed.px-0(type='button' data-bs-toggle='collapse' data-bs-target='#collapse_04' aria-expanded='false' aria-controls='collapse_04') Age #[span.number-info.text-light-500 (1)]
+						#collapse_04.accordion-collapse.collapse(aria-labelledby='heading_04')
+							.accordion-body.px-0
+								.form-check
+									input#check_age_01.form-check-input(type='checkbox')
+									label.form-check-label(for='check_age_01')
+										| Adults #[span.number-info.text-light-500 (70)]
+								.form-check
+									input#check_age_02.form-check-input(type='checkbox' checked)
+									label.form-check-label(for='check_age_02')
+										| Junior #[span.number-info.text-light-500 (52)]
+
+					.accordion-item.border-0.border-bottom
+						h2#heading_05.accordion-header
+							button.accordion-button.collapsed.px-0(type='button' data-bs-toggle='collapse' data-bs-target='#collapse_05' aria-expanded='false' aria-controls='collapse_05') Garment
+						#collapse_05.accordion-collapse.collapse(aria-labelledby='heading_05')
+							.accordion-body.px-0
+								.form-check
+									input#check_garment_01.form-check-input(type='checkbox')
+									label.form-check-label(for='check_garment_01')
+										| Football Socks #[span.number-info.text-light-500 (15)]
+								.form-check
+									input#check_garment_02.form-check-input(type='checkbox')
+									label.form-check-label(for='check_garment_02')
+										| Gloves #[span.number-info.text-light-500 (17)]
+								.form-check
+									input#check_garment_03.form-check-input(type='checkbox')
+									label.form-check-label(for='check_garment_03')
+										| Hats #[span.number-info.text-light-500 (12)]
+								.form-check
+									input#check_garment_04.form-check-input(type='checkbox')
+									label.form-check-label(for='check_garment_04')
+										| Hoodies #[span.number-info.text-light-500 (12)]
+								.form-check
+									input#check_garment_05.form-check-input(type='checkbox')
+									label.form-check-label(for='check_garment_05')
+										| Socks #[span.number-info.text-light-500 (6)]
+
+								#collapse_05_01.collapse
+									.card.card-body.bg-transparent.border-0.shadow-none.p-0
+										.form-check
+											input#check_garment_06.form-check-input(type='checkbox')
+											label.form-check-label(for='check_garment_06')
+												| Dolor #[span.number-info.text-light-500 (7)]
+										.form-check
+											input#check_garment_07.form-check-input(type='checkbox')
+											label.form-check-label(for='check_garment_07')
+												| Lorem #[span.number-info.text-light-500 (7)]
+								p
+									a.btn-show-more.btn.btn-sm.btn-link.text-uppercase.p-0(data-bs-toggle='collapse' href='#collapse_05_01' role='button' aria-expanded='false' aria-controls='collapse_05_01')
+										i.ico-plus
+										span.link-text Show #[span.hidden-active more] #[span.visible-active less]
+	.offcanvas-footer.d-md-none
+		.row.justify-content-between
+			.col-auto
+				button.btn.btn-sm.btn-outline-dark(type="reset") CLEAR FILTERS
+			.col-auto
+				button.btn-apply.btn.btn-sm.btn-dark(type="submit") 
+					| APPLY FILTERS
+					span.number-info.text-light-500 (1)

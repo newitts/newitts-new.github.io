@@ -1,0 +1,14 @@
+//- -var bodyClass = ''
+-var wrapClass = 'bg-light'
+-var badgeNavActive = false
+-var navbarShort = false
+
+include ./pug/common/_head
+	block content
+		include ./pug/common/_header
+
+		main#main
+			include ./pug/components/_steps_checkout_2
+			include ./pug/sections/_cart_checkout_delivery
+
+		include ./pug/common/_footer

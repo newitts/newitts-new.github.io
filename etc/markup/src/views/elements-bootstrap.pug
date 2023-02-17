@@ -1,0 +1,308 @@
+include pug/common/_head
+	.wrapper-holder
+		block content
+			include pug/common/_header
+			main#main
+				section.accordion.py-4
+					.container
+						#accordionExample.accordion
+							.accordion-item
+								h2#headingOne.accordion-header
+									button.accordion-button(type='button' data-bs-toggle='collapse' data-bs-target='#collapseOne' aria-expanded='true' aria-controls='collapseOne')
+										| Accordion Item #1
+								#collapseOne.accordion-collapse.collapse.show(aria-labelledby='headingOne' data-bs-parent='#accordionExample')
+									.accordion-body
+										strong This is the first item's accordion body.
+										|  It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the 
+										code .accordion-body
+										| , though the transition does limit overflow.
+							.accordion-item
+								h2#headingTwo.accordion-header
+									button.accordion-button.collapsed(type='button' data-bs-toggle='collapse' data-bs-target='#collapseTwo' aria-expanded='false' aria-controls='collapseTwo')
+										| Accordion Item #2
+								#collapseTwo.accordion-collapse.collapse(aria-labelledby='headingTwo' data-bs-parent='#accordionExample')
+									.accordion-body
+										strong This is the second item's accordion body.
+										|  It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the 
+										code .accordion-body
+										| , though the transition does limit overflow.
+							.accordion-item
+								h2#headingThree.accordion-header
+									button.accordion-button.collapsed(type='button' data-bs-toggle='collapse' data-bs-target='#collapseThree' aria-expanded='false' aria-controls='collapseThree')
+										| Accordion Item #3
+								#collapseThree.accordion-collapse.collapse(aria-labelledby='headingThree' data-bs-parent='#accordionExample')
+									.accordion-body
+										strong This is the third item's accordion body.
+										|  It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the 
+										code .accordion-body
+										| , though the transition does limit overflow.
+
+				section.jumbotron.py-4
+					.container
+						h1.display-3 Hello, world!
+						p This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.
+						p
+							a.btn.btn-primary(href="#") Button
+				section.jumbotron.text-center.py-4
+					.container
+						h1.display-3 Hello, world!
+						p.lead.text-muted This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.
+						p
+							a.btn.btn-primary.mx-1(href="#") Button
+							a.btn.btn-secondary.mx-1(href="#") Button
+				section.py-4
+					.container
+						.row
+							.col-12
+								h2 Headings
+								h1 Hello, world!
+								h2 Hello, world!
+								h3 Hello, world!
+								h4 Hello, world!
+								h5 Hello, world!
+								h6 Hello, world!
+								hr
+							.col-12
+								h2 Headings + class "display-"
+								h1.display-1 Hello, world!
+								h2.display-2 Hello, world!
+								h3.display-3 Hello, world!
+								h4.display-4 Hello, world!
+						.row
+							.col-12
+								h2 Alerts
+								.alert.alert-warning.alert-dismissible.fade.show(role='alert')
+									strong Holy guacamole!
+									|  You should check in on some of those fields below.
+									button.btn-close(type='button', data-dismiss='alert', aria-label='Close')
+								.alert.alert-primary(role='alert') This is a primary alert—check it out!
+								.alert.alert-secondary(role='alert') This is a secondary alert—check it out!
+								.alert.alert-success(role='alert') This is a success alert—check it out!
+								.alert.alert-danger(role='alert') This is a danger alert—check it out!
+								.alert.alert-warning(role='alert') This is a warning alert—check it out!
+								.alert.alert-info(role='alert') This is a info alert—check it out!
+								.alert.alert-light(role='alert') This is a light alert—check it out!
+								.alert.alert-dark(role='alert') This is a dark alert—check it out!
+							hr
+							.col-12
+								h2 Breadcrumb
+								nav(aria-label='breadcrumb', role='navigation')
+									ol.breadcrumb
+										li.breadcrumb-item.active(aria-current='page') Home
+								nav(aria-label='breadcrumb', role='navigation')
+									ol.breadcrumb
+										li.breadcrumb-item
+											a(href='#') Home
+										li.breadcrumb-item.active(aria-current='page') Library
+								nav(aria-label='breadcrumb', role='navigation')
+									ol.breadcrumb
+										li.breadcrumb-item
+											a(href='#') Home
+										li.breadcrumb-item
+											a(href='#') Library
+										li.breadcrumb-item.active(aria-current='page') Data
+							hr
+							.col-12
+								h2 Buttons
+								button.btn.btn-primary(type='button') Primary
+								button.btn.btn-secondary(type='button') Secondary
+								button.btn.btn-success(type='button') Success
+								button.btn.btn-danger(type='button') Danger
+								button.btn.btn-warning(type='button') Warning
+								button.btn.btn-info(type='button') Info
+								button.btn.btn-light(type='button') Light
+								button.btn.btn-dark(type='button') Dark
+								button.btn.btn-link(type='button') Link
+								h3 Outline buttons
+								button.btn.btn-outline-primary(type='button') Primary
+								button.btn.btn-outline-secondary(type='button') Secondary
+								button.btn.btn-outline-success(type='button') Success
+								button.btn.btn-outline-danger(type='button') Danger
+								button.btn.btn-outline-warning(type='button') Warning
+								button.btn.btn-outline-info(type='button') Info
+								button.btn.btn-outline-light(type='button') Light
+								button.btn.btn-outline-dark(type='button') Dark
+								h3 Sizes
+								button.btn.btn-primary.btn-lg(type='button') Large button
+								button.btn.btn-secondary.btn-lg(type='button') Large button
+								button.btn.btn-primary.btn-sm(type='button') Small button
+								button.btn.btn-secondary.btn-sm(type='button') Small button
+								h3 Checkbox and radio buttons
+								.row
+									.col-12
+										.btn-group(role='group' aria-label='Basic checkbox toggle button group')
+											input#btncheck1.btn-check(type='checkbox' autocomplete='off')
+											label.btn.btn-outline-primary(for='btncheck1') Checkbox 1
+
+											input#btncheck2.btn-check(type='checkbox' autocomplete='off')
+											label.btn.btn-outline-primary(for='btncheck2') Checkbox 2
+
+											input#btncheck3.btn-check(type='checkbox' autocomplete='off')
+											label.btn.btn-outline-primary(for='btncheck3') Checkbox 3
+									.col-12
+										.btn-group(role='group' aria-label='Basic radio toggle button group')
+											input#btnradio1.btn-check(type='radio' name='btnradio' autocomplete='off' checked='')
+											label.btn.btn-outline-primary(for='btnradio1') Radio 1
+
+											input#btnradio2.btn-check(type='radio' name='btnradio' autocomplete='off')
+											label.btn.btn-outline-primary(for='btnradio2') Radio 2
+
+											input#btnradio3.btn-check(type='radio' name='btnradio' autocomplete='off')
+											label.btn.btn-outline-primary(for='btnradio3') Radio 3
+							hr
+							.col-12
+								h2 Button group
+								h3 Basic example
+								.btn-group(role='group', aria-label='Basic example')
+									button.btn.btn-secondary(type='button') Left
+									button.btn.btn-secondary(type='button') Middle
+									button.btn.btn-secondary(type='button') Right
+								h3 Nesting
+								.btn-group(role='group', aria-label='Button group with nested dropdown')
+									button.btn.btn-secondary(type='button') 1
+									button.btn.btn-secondary(type='button') 2
+									.btn-group(role='group')
+										button#btnGroupDrop1.btn.btn-secondary.dropdown-toggle(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+											| Dropdown
+										.dropdown-menu(aria-labelledby='btnGroupDrop1')
+											a.dropdown-item(href='#') Dropdown link
+											a.dropdown-item(href='#') Dropdown link
+							hr
+							.col-12
+								h2 Cards
+								.card(style='width: 20rem;')
+									img.card-img-top(alt='100%x180', src='data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22318%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20318%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_15fbe6a517f%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A16pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_15fbe6a517f%22%3E%3Crect%20width%3D%22318%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22118.015625%22%20y%3D%2297.2%22%3E318x180%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E')
+									.card-body
+										h4.card-title Card title
+										p.card-text
+											| Some quick example text to build on the card title and make up the bulk of the card's content.
+										a.btn.btn-primary(href='#') Go somewhere
+								h3 Titles, text, and links
+								.card(style='width: 20rem;')
+									.card-body
+										h4.card-title Card title
+										h6.card-subtitle.mb-2.text-muted Card subtitle
+										p.card-text
+											| Some quick example text to build on the card title and make up the bulk of the card's content.
+										a.card-link(href='#') Card link
+										a.card-link(href='#') Another link
+								h3 Images
+								.card(style='width: 20rem;')
+									img.card-img-top(alt='100%x180', src='data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22318%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20318%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_15fbe6a517f%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A16pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_15fbe6a517f%22%3E%3Crect%20width%3D%22318%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22118.015625%22%20y%3D%2297.2%22%3E318x180%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E')
+									.card-body
+										p.card-text
+											| Some quick example text to build on the card title and make up the bulk of the card's content.
+								h3 Text alignment
+								.card(style='width: 20rem;')
+									.card-body
+										h4.card-title Special title treatment
+										p.card-text With supporting text below as a natural lead-in to additional content.
+										a.btn.btn-primary(href='#') Go somewhere
+								.card.text-center(style='width: 20rem;')
+									.card-body
+										h4.card-title Special title treatment
+										p.card-text With supporting text below as a natural lead-in to additional content.
+										a.btn.btn-primary(href='#') Go somewhere
+								.card.text-right(style='width: 20rem;')
+									.card-body
+										h4.card-title Special title treatment
+										p.card-text With supporting text below as a natural lead-in to additional content.
+										a.btn.btn-primary(href='#') Go somewhere
+								h3 Card groups
+								.card-group
+									.card
+										img.card-img-top(alt='100%x180', src='data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22209%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20209%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_15fbe6a5192%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A10pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_15fbe6a5192%22%3E%3Crect%20width%3D%22209%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%2278.9296875%22%20y%3D%2294.5%22%3E209x180%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E')
+										.card-body
+											h4.card-title Card title
+											p.card-text
+												| This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+											p.card-text
+												small.text-muted Last updated 3 mins ago
+									.card
+										img.card-img-top(alt='100%x180', src='data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22209%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20209%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_15fbe6a5192%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A10pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_15fbe6a5192%22%3E%3Crect%20width%3D%22209%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%2278.9296875%22%20y%3D%2294.5%22%3E209x180%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E')
+										.card-body
+											h4.card-title Card title
+											p.card-text This card has supporting text below as a natural lead-in to additional content.
+											p.card-text
+												small.text-muted Last updated 3 mins ago
+									.card
+										img.card-img-top(alt='100%x180', src='data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22209%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20209%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_15fbe6a5192%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A10pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_15fbe6a5192%22%3E%3Crect%20width%3D%22209%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%2278.9296875%22%20y%3D%2294.5%22%3E209x180%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E')
+										.card-body
+											h4.card-title Card title
+											p.card-text
+												| This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.
+											p.card-text
+												small.text-muted Last updated 3 mins ago
+								h3 Grid Cards
+								.row.row-cols-1.row-cols-md-2.g-4
+									.col
+										.card
+											img.card-img-top(alt='100%x180', src='data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22209%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20209%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_15fbe6a5192%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A10pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_15fbe6a5192%22%3E%3Crect%20width%3D%22209%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%2278.9296875%22%20y%3D%2294.5%22%3E209x180%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E')
+											.card-body
+												h5.card-title Card title
+												p.card-text
+													| This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+									.col
+										.card
+											img.card-img-top(alt='100%x180', src='data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22209%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20209%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_15fbe6a5192%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A10pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_15fbe6a5192%22%3E%3Crect%20width%3D%22209%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%2278.9296875%22%20y%3D%2294.5%22%3E209x180%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E')
+											.card-body
+												h5.card-title Card title
+												p.card-text
+													| This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+									.col
+										.card
+											img.card-img-top(alt='100%x180', src='data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22209%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20209%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_15fbe6a5192%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A10pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_15fbe6a5192%22%3E%3Crect%20width%3D%22209%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%2278.9296875%22%20y%3D%2294.5%22%3E209x180%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E')
+											.card-body
+												h5.card-title Card title
+												p.card-text
+													| This is a longer card with supporting text below as a natural lead-in to additional content.
+									.col
+										.card
+											img.card-img-top(alt='100%x180', src='data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22209%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20209%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_15fbe6a5192%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A10pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_15fbe6a5192%22%3E%3Crect%20width%3D%22209%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%2278.9296875%22%20y%3D%2294.5%22%3E209x180%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E')
+											.card-body
+												h5.card-title Card title
+												p.card-text
+													| This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+
+							hr
+
+							.row.row-cols-1.row-cols-md-3.g-4
+								.col
+									.card
+										img.card-img-top(alt='100%x180', src='data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22209%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20209%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_15fbe6a5192%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A10pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_15fbe6a5192%22%3E%3Crect%20width%3D%22209%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%2278.9296875%22%20y%3D%2294.5%22%3E209x180%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E')
+										.card-body
+											h5.card-title Card title
+											p.card-text
+												| This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+								.col
+									.card
+										img.card-img-top(alt='100%x180', src='data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22209%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20209%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_15fbe6a5192%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A10pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_15fbe6a5192%22%3E%3Crect%20width%3D%22209%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%2278.9296875%22%20y%3D%2294.5%22%3E209x180%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E')
+										.card-body
+											h5.card-title Card title
+											p.card-text
+												| This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+								.col
+									.card
+										img.card-img-top(alt='100%x180', src='data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22209%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20209%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_15fbe6a5192%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A10pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_15fbe6a5192%22%3E%3Crect%20width%3D%22209%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%2278.9296875%22%20y%3D%2294.5%22%3E209x180%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E')
+										.card-body
+											h5.card-title Card title
+											p.card-text
+												| This is a longer card with supporting text below as a natural lead-in to additional content.
+								.col
+									.card
+										img.card-img-top(alt='100%x180', src='data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22209%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20209%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_15fbe6a5192%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A10pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_15fbe6a5192%22%3E%3Crect%20width%3D%22209%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%2278.9296875%22%20y%3D%2294.5%22%3E209x180%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E')
+										.card-body
+											h5.card-title Card title
+											p.card-text
+												| This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+
+							.col-12
+								h2
+							hr
+							.col-12
+								h2
+							hr
+							.col-12
+								h2
+
+			include pug/common/_footer

@@ -1,0 +1,599 @@
+// Variables custom
+//
+// Color system
+
+// scss-docs-start gray-color-variables
+$white:    #fff !default;
+$gray-100: #F7F7F7;
+$gray-200: #e9ecef !default;
+$gray-300: #EBEBEB;
+$gray-350: #E8E8E8;
+$gray-400: #ededed;
+$gray-450: #E0E0E0;
+$gray-470: #D3D3D3;
+$gray-490: #C1C1C1;
+$gray-500: #B4B4B4;
+$gray-520: #9F9C9C;
+$gray-600: #6F6F6F;
+$gray-700: #494949;
+$gray-710: #4b4b4b;
+$gray-800: #343a40 !default;
+$gray-900: #1C1C1C;
+$black:    #000 !default;
+// scss-docs-end gray-color-variables
+
+// fusv-disable
+// scss-docs-start gray-colors-map
+$grays: (
+  "100": $gray-100,
+  "200": $gray-200,
+  "300": $gray-300,
+  "350": $gray-350,
+  "400": $gray-400,
+  "450": $gray-450,
+  "470": $gray-470,
+  "500": $gray-500,
+  "520": $gray-520,
+  "600": $gray-600,
+  "700": $gray-700,
+  "800": $gray-800,
+  "900": $gray-900
+);
+// scss-docs-end gray-colors-map
+// fusv-enable
+
+// scss-docs-start color-variables
+$blue:    #00AAE4;
+$blue-dark:    #0E1E47;
+$indigo:  #6610f2 !default;
+$purple:  #6f42c1 !default;
+$pink:    #d63384 !default;
+$red:     #FF1111;
+$orange:  #FF8A35;
+$yellow:  #FFC439;
+$green:   #30942E;
+$green-100: #E6F5DF;
+$green-200:   #D2FAD1;
+$green-400:   #4DB81A;
+$green-450:   #1BB23C;
+$teal:    #20c997 !default;
+$cyan:    #0dcaf0 !default;
+$cyan-300: #ACD8F8;
+
+// scss-docs-start colors-map
+$colors: (
+  "blue":       $blue,
+  "indigo":     $indigo,
+  "purple":     $purple,
+  "pink":       $pink,
+  "red":        $red,
+  "orange":     $orange,
+  "yellow":     $yellow,
+  "green":      $green,
+  "teal":       $teal,
+  "cyan":       $cyan,
+  "black":      $black,
+  "white":      $white,
+  "gray":       $gray-600
+);
+// scss-docs-end colors-map
+
+// Add your custom color here
+$colors-custom: (
+  "blue-dark":  $blue-dark,
+  "green-200":  $green-200,
+  "green-400":  $green-400,
+  "green-450":  $green-450,
+  "gray-dark":  $gray-800
+);
+
+// Merge the colors maps
+$theme-colors: map-merge($colors, $colors-custom);
+
+// scss-docs-start theme-color-variables
+$primary:       $blue;
+$primary-dark:  $blue-dark;
+$secondary:     $gray-600;
+$secondary-light: $gray-350;
+$success:       $green;
+$success-100:   $green-100;
+$success-200:   $green-200;
+$success-400:   $green-400;
+$success-450:   $green-450;
+$info:          $cyan;
+$info-300:      $cyan-300;
+$warning:       $orange;
+$warning-yellow:$yellow;
+$danger:        $red;
+$light:         $gray-100;
+$light-200:     $gray-200;
+$light-300:     $gray-300;
+$light-350:     $gray-350;
+$light-400:     $gray-400;
+$light-450:     $gray-450;
+$light-500:     $gray-500;
+$light-520:     $gray-520;
+$light-600:     $gray-600;
+$dark:          $gray-900;
+// scss-docs-end theme-color-variables
+
+$theme-colors: (
+  "primary":    $primary,
+  "secondary":  $secondary,
+  "success":    $success,
+  "info":       $info,
+  "warning":    $warning,
+  "danger":     $danger,
+  "light":      $light,
+  "dark":       $dark
+);
+
+$orange-100: #fdf4ee;
+
+$gray-base: rgba($dark, .4);
+$gray-alt: rgba($dark, .6);
+
+// Add your custom theme color here
+$theme-colors-custom: (
+  "primary-dark":    $primary-dark,
+  "secondary-light":  $secondary-light,
+  "success-100":    $success-100,
+  "success-200":    $success-200,
+  "success-400":    $success-400,
+  "success-450":    $success-450,
+  "warning-yellow": $yellow,
+  "info-300":       $info-300,
+  "light-200":  $light-200,
+  "light-300":  $light-300,
+  "light-350":  $light-350,
+  "light-400":  $light-400,
+  "light-450":  $light-450,
+  "light-500":  $light-500,
+  "light-520":  $light-520,
+  "light-600":  $light-600,
+);
+
+// Merge the theme-colors maps
+$theme-colors: map-merge($theme-colors, $theme-colors-custom);
+
+$success-text:            $green-400;
+
+$success-bg-subtle:       $green-100;
+
+// scss-docs-start spacer-variables-maps
+$spacer: 1rem;
+$spacers: (
+  0: 0,
+  1: $spacer * .25,
+  12: $spacer * .375,
+  15: $spacer * .5,
+  17: $spacer * .625,
+  2: $spacer * .75,
+  25: $spacer * .875,
+  3: $spacer,
+  33: $spacer * 1.125,
+  35: $spacer * 1.25,
+  37: $spacer * 1.375,
+  4: $spacer * 1.5,
+  5: $spacer * 1.625
+);
+// scss-docs-end spacer-variables-maps
+
+$spacers-custom: (
+  52: $spacer * 1.75,
+  53: $spacer * 1.875,
+  54: $spacer * 2,
+  55: $spacer * 2.1875,
+  6: $spacer * 2.5,
+  65: $spacer * 2.6875,
+  67: $spacer * 2.75,
+  7: $spacer * 3,
+  73: $spacer * 3.1875,
+  75: $spacer * 3.375,
+  8: $spacer * 3.75,
+  82: $spacer * 3.875,
+  85: $spacer * 4.125,
+  9: $spacer * 4.5,
+  10: $spacer * 6
+);
+
+// Merge the maps
+$spacers: map-merge($spacers, $spacers-custom);
+
+// $gutters: $spacers;
+
+
+// Body
+$body-color:                $gray-700;
+$body-color-alt:            $dark;
+$body-color-alt-2:            $gray-710;
+
+
+// Links
+// $link-color:                $dark;
+$link-color:                $primary;
+$link-color-alt:            $primary-dark;
+
+$link-hover-color:          $warning;
+
+
+// scss-docs-start grid-breakpoints
+$grid-breakpoints: (
+  xs: 0,
+  sph: 390px,
+  ph: 480px,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xll: 1300px,
+  xxl: 1600px
+);
+// scss-docs-end grid-breakpoints
+
+// @include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
+// @include _assert-starts-at-zero($grid-breakpoints, "$grid-breakpoints");
+
+// Grid containers
+//
+// Define the maximum width of `.container` for different screen sizes.
+
+// scss-docs-start container-max-widths
+$container-max-widths: (
+  sph:360px,
+  ph: 460px,
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xll: 1240px,
+  xxl: 1632px
+);
+// xxl: 1134px
+// xxl: 1284px
+// scss-docs-end container-max-widths
+
+// Grid columns
+$grid-gutter-width:           2rem; // 32px
+
+// Container padding
+
+$container-padding-x: $grid-gutter-width;
+
+// Components
+// scss-docs-start border-radius-variables
+// $border-color:                $gray-470;
+$border-color:                $light-300;
+
+$border-radius:               .5rem; // 8px
+$border-radius-md:            .375rem; // 6px // custom
+$border-radius-sm:            .25rem; // 4px
+$border-radius-lg:            .75rem ; // 12px
+
+// scss-docs-start box-shadow-variables
+$box-shadow:                  0px 3px 10px rgba(36, 36, 36, 0.1);
+$box-shadow-alt:              0px 0px 20px rgba(0, 0, 0, 0.05); // custom
+$box-shadow-sm:               0px 1px 6px rgba(36, 36, 36, 0.1);
+$box-shadow-lg:               0px 6px 21px rgba(36, 36, 36, 0.1);
+$box-shadow-inset:            inset 0 0 0 rgba(var(--#{$prefix}body-color-rgb), 0);
+// scss-docs-end box-shadow-variables
+
+$component-active-bg:         $warning;
+
+// Options
+$enable-shadows:              true;
+$enable-negative-margins:     true;
+
+
+// Typography
+
+$font-family-sans-serif:  'gilroy', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+$font-size-lg:                $font-size-base * 1.125; // 18px
+
+// $font-weight-lighter:         lighter;
+// $font-weight-light:           300;
+// $font-weight-normal:          400;
+// $font-weight-medium:          500;
+// $font-weight-semibold:        600;
+// $font-weight-bold:            700;
+// $font-weight-bolder:          bolder;
+
+$letter-spacing-base: .04em; // custom
+$letter-spacing-alt: .03em; // custom
+
+$h1-font-size:                $font-size-base * 3.125; // 50px
+$h2-font-size:                $font-size-base * 1.875; // 30px
+$h3-font-size:                $font-size-base * 1.75; // 28px
+$h4-font-size:                $font-size-base * 1.5;  // 24px
+$h5-font-size:                $font-size-base * 1.25;  // 20px
+$h6-font-size:                $font-size-base;
+
+// scss-docs-start headings-variables
+$headings-margin-bottom:      .5em;
+$headings-font-weight:        600;
+$headings-color:              $body-color-alt;
+// scss-docs-end headings-variables
+
+// scss-docs-start display-headings
+$display-font-sizes: (
+  1: 5rem,
+  2: 4.5rem,
+  3: 4rem,
+  4: 3.75rem,
+  5: 3rem,
+  6: 2.5rem
+);
+
+$display-font-weight: 700;
+// scss-docs-end display-headings
+
+
+// scss-docs-start type-variables
+$small-line-height: 1.285714;
+
+
+// Tables
+//
+// Customizes the `.table` component with basic values, each used across all table variations.
+
+// scss-docs-start table-variables
+// $table-cell-padding-y:        .3125rem;
+$table-cell-padding-y:        .75rem; // 12px
+// $table-cell-padding-x:        .5rem;
+
+$table-bg:                    $white;
+
+$table-th-color:        $black; // custom
+$table-th-font-weight:        600;
+
+$table-striped-bg:            $orange-100;
+// $table-border-color:          $border-color;
+$table-border-color-alt:    #c2c9d1; // custom
+
+$table-striped-order:         even;
+
+// Buttons + Forms
+$input-btn-padding-y:         .5625rem; // 9px
+$input-btn-padding-x:         1.25rem; // 20px
+$input-font-weight:           $font-weight-semibold;
+
+$input-btn-padding-y-sm:      .4375rem; // 7px
+$input-btn-padding-x-sm:      1rem; // 16px
+
+$input-btn-padding-y-lg:      .8125rem; // 13px
+$input-btn-padding-x-lg:      1.5rem; // 24px
+$input-btn-font-size-lg:      $font-size-lg;
+
+$input-btn-focus-width:         1px;
+$input-btn-focus-color-opacity: 1;
+// $input-btn-focus-color:         rgba($component-active-bg, $input-btn-focus-color-opacity);
+$input-btn-focus-color:         rgba($warning, $input-btn-focus-color-opacity);
+$input-btn-focus-blur:          0;
+$input-btn-focus-box-shadow:    0 0 $input-btn-focus-blur $input-btn-focus-width $input-btn-focus-color;
+$input-btn-focus-box-shadow-none:    0 0 0 0 transparent; // custom
+
+// $input-focus-border-color:   $input-btn-focus-color;
+$input-focus-border-color:   $dark;
+
+
+// Buttons
+$btn-padding-y:               $input-btn-padding-y;
+$btn-padding-x:               $input-btn-padding-x;
+
+$btn-padding-y-sm:            $input-btn-padding-y-sm;
+$btn-padding-x-sm:            $input-btn-padding-x-sm;
+
+$btn-font-size-lg:            $input-btn-font-size-lg;
+
+$btn-font-weight:             $font-weight-semibold;
+
+$btn-box-shadow:              inset 0 1px 0 rgba($white, .15), 0 1px 1px rgba($black, 0);
+
+$btn-hover-bg-color:          $warning; // custom
+$btn-hover-color:             $warning; // custom
+
+$btn-border-radius:           $border-radius;
+$btn-border-radius-lg:        $border-radius;
+
+
+// Forms
+$form-label-color:                      $body-color-alt;
+$form-label-margin-bottom:              .375rem; // 6px
+
+$form-text-font-size:                   $font-size-base;
+
+$input-padding-y:                       $input-btn-padding-y;
+$input-padding-x:                       $input-btn-padding-x;
+
+$input-bg: $white;
+$input-border-color:                    $gray-470;
+$input-border-color-alt:                $secondary-light; // custom
+
+$input-color:                           $body-color-alt;
+$input-font-weight:                     $font-weight-semibold;
+
+$input-box-shadow:                      $box-shadow-inset;
+
+$input-focus-color:                     $input-color;
+// $input-focus-box-shadow:                $input-btn-focus-box-shadow;
+$input-focus-box-shadow:                $input-btn-focus-box-shadow-none;
+
+$input-placeholder-color:               $gray-base;
+$input-placeholder-color-footer:        rgba($secondary, .7);
+
+// scss-docs-start form-check-variables
+$form-check-input-width:  1.0625rem;
+$form-check-input-width-sm:  .875rem;  // custom 14px
+$form-check-input-border:  1px solid $secondary-light;
+// $form-check-input-border:  1px solid $gray-base;
+$form-check-input-checked-border-color: rgba(28, 28, 28, 0.15);
+$form-check-margin-bottom:                .625rem;
+$form-check-margin-bottom-md:             .375rem; // custom =6px
+$form-check-label-color:                  $secondary;
+$form-check-label-fw:                     $font-weight-medium; // custom
+$form-check-input-focus-border:           $input-focus-border-color;
+$form-check-input-focus-box-shadow:       $input-btn-focus-box-shadow;
+
+$form-check-input-checked-bg-color:       $component-active-bg;
+
+$form-check-radio-checked-bg-image-alt:       url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='2' fill='#{$form-check-input-checked-bg-color}'/></svg>") ;
+
+
+// scss-docs-start form-select-variables
+$form-select-padding-y:             $input-padding-y;
+$form-select-font-weight:           $input-font-weight;
+$form-select-color:                 $input-color;
+
+$form-select-box-shadow:            $box-shadow-inset;
+$form-select-focus-box-shadow:      $input-focus-border-color;
+
+$form-select-focus-border-color:  $input-focus-border-color;
+
+// Breadcrumbs
+$breadcrumb-font-size:              12px;
+$breadcrumb-item-padding-x:         .375rem;
+$breadcrumb-divider-color:  $body-color-alt;
+$breadcrumb-active-color:   $body-color-alt;
+
+// Badges
+
+// scss-docs-start badge-variables
+// $badge-font-size:                   1.125rem;
+$badge-font-weight:                 600;
+$badge-padding-y:                   0.438rem;
+$badge-padding-x:                   1.375rem;
+$badge-border-radius:               1rem;
+
+
+// scss-docs-start zindex-levels-map
+$zindex-levels: (
+  n1: -1,
+  0: 0,
+  1: 1,
+  2: 2,
+  3: 3
+);
+// scss-docs-end zindex-levels-map
+
+$zindex-levels-custom: (
+  4: 4,
+  5: 5,
+  6: 6,
+  7: 7,
+  8: 8
+);
+
+// Merge the maps
+$zindex-levels: map-merge($zindex-levels, $zindex-levels-custom);
+
+
+// Navs
+$nav-link-padding-y:  $spacer * .5;
+$nav-link-font-weight: $font-weight-semibold;
+
+$nav-link-color: $gray-900;
+$nav-link-hover-color: $warning;
+
+
+// Navbar
+
+// $navbar-padding-y:  ;
+
+$navbar-nav-link-padding-y: $spacer * 1.25; // custom  =20px
+$navbar-nav-link-padding-x: 20px; // custom
+
+$navbar-light-color: $nav-link-color;
+$navbar-light-hover-color:  $nav-link-hover-color;
+$navbar-light-active-color: $navbar-light-hover-color;
+
+$navbar-item-border-color: $border-color; // custom
+
+$navbar-toggler-padding-y:      .25rem;
+$navbar-toggler-padding-x:      .25rem;
+$navbar-toggler-border-radius:   50%;
+
+$navbar-light-toggler-border-color: $navbar-item-border-color;
+
+
+// Dropdowns
+
+$dropdown-min-width:                5.625rem; // 90px
+$dropdown-padding-y:   0;
+
+$dropdown-font-weight:   $font-weight-medium; // custom
+$dropdown-color:   $body-color-alt;
+$dropdown-border-color: $light-500;
+$dropdown-border-radius:  6px;
+
+$dropdown-link-color:  $dropdown-color;
+$dropdown-link-hover-bg:  $light;
+
+$dropdown-item-padding-y:           $spacer * .5; // 8px
+
+
+// Pagination
+$pagination-font-weight:              $font-weight-semibold; // custom
+
+$pagination-color:                  $dark;
+
+
+// Modals
+$modal-inner-padding:               1.25rem;
+
+
+// Cards
+
+// scss-docs-start card-variables
+$card-spacer-x-xl:                  1.5rem; // 24px
+
+$card-box-shadow:                   $box-shadow;
+$card-cap-bg:                       transparent;
+$card-img-overlay-padding:          1.5rem;
+
+$card-title-color:                  $headings-color;
+
+
+// Accordion
+
+// $accordion-bg: transparent;
+$accordion-border-radius: 0;
+$accordion-inner-border-radius: 0;
+
+$accordion-button-color:  $body-color-alt;
+
+$accordion-button-active-bg:   $accordion-bg;
+$accordion-button-active-color:   $accordion-color;
+
+$accordion-button-focus-border-color:     $input-focus-border-color;
+$accordion-button-focus-box-shadow:       $input-focus-box-shadow;
+
+
+// List group
+
+$list-group-color:    $secondary;
+$list-group-border-color:           $secondary-light;
+$list-group-item-padding-y:         $spacer; // 16px
+$list-group-item-padding-x:         $spacer * 1.125;  // 18px
+
+
+// Close
+
+
+// Offcanvas
+// $offcanvas-bg-color:                var(--#{$prefix}body-bg);
+$offcanvas-horizontal-width:        374px;
+
+
+// Custom variables
+
+$body-min-width: 320px;
+
+$footer-bg-color: $dark;
+
+// star rating
+$star-inactive: $light-450;
+$star-active: $warning;
+
+$vertical-rythm: calc(30 / 23 * 1em);
+$vertical-rythm-sm: calc(25 / 23 * 1em);

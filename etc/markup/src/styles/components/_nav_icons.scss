@@ -1,0 +1,31 @@
+.nav-icons {
+    margin-left: -5px;
+    margin-right: -5px;
+
+    .nav-item {
+        padding: 0 5px;
+    }
+
+    .nav-link {
+        border: 1px solid $navbar-light-toggler-border-color;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:hover,
+        &:focus {
+            border-color: $nav-link-hover-color;
+            color: $navbar-light-color;
+            box-shadow: 0 0 0 1px $nav-link-hover-color;
+        }
+    }
+
+    .badge {
+        @include size(19px);
+        font-size: rem-calc(10);
+        font-weight: $font-weight-semibold;
+        padding: 4px !important;
+        margin: 30% 0 0 -28%;
+    }
+}
